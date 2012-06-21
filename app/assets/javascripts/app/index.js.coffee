@@ -11,14 +11,14 @@
 #= require_tree ./controllers
 #= require_tree ./views
 
-class App extends Spine.Controller
+class Party extends Spine.Controller
+  elements:
+    ".playlist" : "playlistEl"
+
   constructor: ->
     super
-    
-    # Initialize controllers:
-    #  @append(@items = new App.Items)
-    #  ...
-    
-    Spine.Route.setup()    
+    @playlist = new Playlist({ el: @playlistEl })
 
-window.App = App
+    # Spine.Route.setup()    
+
+window.Party = Party
