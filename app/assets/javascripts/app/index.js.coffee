@@ -14,10 +14,12 @@
 class Party extends Spine.Controller
   elements:
     ".playlist" : "playlistEl"
+    ".search"   : "searchEl"
 
   constructor: ->
     super
     @playlist = new Playlist({ el: @playlistEl })
+    @search = new Search({ el: @searchEl })
 
     # Spine.Route.setup()    
 
