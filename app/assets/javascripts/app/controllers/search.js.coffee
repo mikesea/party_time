@@ -5,13 +5,13 @@ class Search extends Spine.Controller
     "submit #artist_search_form" : "search"
 
   elements:
-    ".playlist-items" : "songs"
+    "#artist_search_form" : "artist_search"    
 
   constructor: ->
     super
 
   search: (e) ->
     e.preventDefault()
-    alert "boom!"
+    console.log @artist_search
 
 window.Search = Search
