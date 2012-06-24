@@ -13,6 +13,26 @@
       <input type='submit' value='Search' />
     </form>
   </div>
+
+  <div class="player">
+    <div id="api"></div>
+    <img id="art" src="" height="200" width="200" style="float:left;margin-right:20px;">
+    <div>
+      <div><b>Track: </b><span id="track"></span></div>
+      <div><b>Album: </b><span id="album"></span></div>
+      <div><b>Artist: </b><span id="artist"></span></div>
+      <div><b>Position: </b>
+        <span style="display:inline-block;width:200px;border:1px solid black;">
+          <span id="position" style="display:inline-block;background-color:#666">&nbsp;</span>
+        </span></div>
+      <div>
+        <button id="previous">&lt;&lt;</button>
+        <button id="play">|&gt;</button>
+        <button id="pause">||</button>
+        <button id="next">&gt;&gt;</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script type="text/javascript" charset="utf-8">
