@@ -1,0 +1,1 @@
+json.tracks @tracks, :artist_name, :title, :rdio_id
