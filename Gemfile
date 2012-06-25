@@ -6,6 +6,8 @@ gem 'jquery-rails'
 gem 'spine-rails'
 gem 'thin'
 gem 'nestling'
+gem 'hashie'
+gem 'ripple', git: 'https://github.com/seancribbs/ripple.git'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
