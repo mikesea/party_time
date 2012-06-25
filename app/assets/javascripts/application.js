@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require handlebars
 //= require app
+//= require jquery.rdio
 //= require_tree .
