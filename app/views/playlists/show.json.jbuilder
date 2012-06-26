@@ -1,3 +1,3 @@
 json.id @playlist.key
-json.event_date @playlist.event_date
+json.event @playlist.event, :date, :name, :details, :location
 json.tracks @playlist.tracks, :artist_name, :title, :rdio_id

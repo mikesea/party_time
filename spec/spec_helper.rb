@@ -17,7 +17,6 @@ require 'ripple/test_server'
 RSpec.configure do |config|
 
   config.before(:suite) { Ripple::TestServer.setup }
-
   config.after(:each) { Ripple::TestServer.clear }
 
   # ## Mock Framework
