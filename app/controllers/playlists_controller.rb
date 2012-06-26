@@ -4,4 +4,8 @@ class PlaylistsController < ApplicationController
       head status: :bad_request
     end
   end
+
+  def new
+  	@playlist = Playlist.new
+  end
 end

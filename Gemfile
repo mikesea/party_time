@@ -11,6 +11,7 @@ gem 'hashie'
 gem 'ripple', git: 'https://github.com/seancribbs/ripple.git'
 gem 'jbuilder'
 gem 'bson_ext'
+gem 'chronic'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
