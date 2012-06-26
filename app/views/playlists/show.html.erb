@@ -1,11 +1,10 @@
+<%= content_for(:head) do %>
+  <%= playlist_id_tag %>
+<% end %>
+
 <h1>Playlist</h1>
 
 <div class="container">
-  <div class="playlist">
-    <ul class="playlist-items">
-    </ul>
-  </div>
-
   <div class="search">
     <form id='artist_search_form'>
       <input type='text' id='artist_search_box' placeholder='The Black Keys' />
@@ -30,6 +29,10 @@
         <button id="pause">||</button>
         <button id="next">&gt;&gt;</button>
       </div>
+    </div>
+    <div class="playlist">
+      <ul class="playlist-items">
+      </ul>
     </div>
   </div>
 </div>

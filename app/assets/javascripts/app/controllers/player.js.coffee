@@ -1,30 +1,48 @@
 class Player extends Spine.Controller
+  @extend(Spine.Events)
+
+  events:
+    "click .playlist-item" : "playFromPlaylist"
+    "click #play" : "playFromPlayer"
+
   elements:
-    "#api" : "api"
+    "#api"      : "api"
+    "#play"     : "play"
+    "#pause"    : "pause"
+    "#previous" : "previous"
+    "#next"     : "next"
 
   constructor: ->
     super
     $("#pause").hide()
     @load()
 
-  load: ->
-    @api.bind "ready.rdio"#, ->
-      # $("#pause").hide()
-      # $(this).rdio().play "a171827"
+  playFromPlayer: =>
+    @api.rdio().play(@currentTrack())
 
-    $("#api").bind "playingTrackChanged.rdio", (e, playingTrack, sourcePosition) ->
+  playFromPlaylist: (e) =>
+    track = $(e.target).parent().attr("data-rdio-id")
+    @api.rdio().play(track)
+
+  currentTrack: =>
+    $("#current-track").attr("data-rdio-id")
+
+  load: =>
+    @api.bind "ready.rdio"
+
+    $("#api").bind "playingTrackChanged.rdio", (e, playingTrack, sourcePosition) =>
       if playingTrack
         duration = playingTrack.duration
-        console.log duration
+        console.log playingTrack
         $("#art").attr "src", playingTrack.icon
         $("#track").text playingTrack.name
         $("#album").text playingTrack.album
         $("#artist").text playingTrack.artist
 
-    $("#api").bind "positionChanged.rdio", (e, position) ->
+    $("#api").bind "positionChanged.rdio", (e, position) =>
       $("#position").css "width", Math.floor(100 * position / duration) + "%"
 
-    $("#api").bind "playStateChanged.rdio", (e, playState) ->
+    $("#api").bind "playStateChanged.rdio", (e, playState) =>
       if playState is 0
         $("#play").show()
         $("#pause").hide()
@@ -36,13 +54,10 @@ class Player extends Spine.Controller
     $("#previous").click ->
       $("#api").rdio().previous()
 
-    $("#play").click ->
-      $("#api").rdio().play("t2838129")
-
-    $("#pause").click ->
+    $("#pause").click =>
       $("#api").rdio().pause()
 
-    $("#next").click ->
-      $("#api").rdio().next()
+    $("#next").click =>
+      $("#api").rdio().next(@nextTrack())
 
 window.Player = Player

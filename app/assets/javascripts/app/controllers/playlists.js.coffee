@@ -1,12 +1,20 @@
 class Playlist extends Spine.Controller
   elements:
-    ".playlist-items" : "songs"
+    ".playlist-items" : "tracks"
 
   constructor: ->
     super
-    @songs.append @template()
+    Track.bind 'refresh', @addAll
+    Track.fetch()
 
-  template: ->
-    @view('playlists/song')
+  addAll: =>
+    for track in Track.all()
+      @addOne(track)
+
+  addOne: (track) =>
+    @tracks.append @template(track)
+
+  template: (track) ->
+    @view('playlists/song')(track)
 
 window.Playlist = Playlist

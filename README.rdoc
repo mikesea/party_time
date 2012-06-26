@@ -1,3 +1,1 @@
-Super top secret.
-
-Also public.
+Party Time: A social playlist generator for your next party.
