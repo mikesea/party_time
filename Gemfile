@@ -10,6 +10,7 @@ gem 'nestling'
 gem 'hashie'
 gem 'ripple', git: 'https://github.com/seancribbs/ripple.git'
 gem 'jbuilder'
+gem 'bson_ext'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -19,5 +20,8 @@ group :assets do
 end
 
 group :test, :development do
+  gem 'rspec-rails'
+  gem "rack-test", require: "rack/test"
+  gem "factory_girl"
   gem "konacha"
 end
