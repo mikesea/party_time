@@ -1,6 +1,7 @@
 class PlaylistsController < ApplicationController
   def show
-    @playlist = Playlist.find(params[:id])
-    # render json: @playlist, status: :ok
+    unless @playlist = Playlist.find(params[:id])
+      head status: :bad_request
+    end
   end
 end

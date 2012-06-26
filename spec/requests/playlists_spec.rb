@@ -32,6 +32,16 @@ describe "Playlists" do
         response.status.should == 200
       end
     end
+
+    context "the playlist doesn't exist" do
+      before(:each) do
+        get playlist_url("123", format: :json)
+      end
+
+      it "returns a 400 response" do
+        response.status.should == 400
+      end
+    end
   end
 
 end
