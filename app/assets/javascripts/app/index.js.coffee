@@ -21,8 +21,19 @@ class Party extends Spine.Controller
     super
     @search = new Search({ el: @searchEl })
     @playlist = new Playlist({ el: @playlistEl })
-    @player = new Player({ el: @playerEl })
+    @player = new Player({ el: @playerEl }) 
 
-    # Spine.Route.setup()    
+class Generator extends Spine.Controller
+  elements:
+    ".new_event"        : "eventEl"
+    ".playlist_primer"  : "primerEl"
 
+  constructor: ->
+    super
+    @event = new Event({ el: @eventEl })
+    @primer = new PlaylistPrimer({ el: @primerEl })
+
+  # Spine.Route.setup()
+
+window.Generator = Generator
 window.Party = Party

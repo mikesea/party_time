@@ -1,10 +1,16 @@
 <h1>Let's have a party!</h1>
 
 <div class="container">
-	<div id="new_event">
+	<div class="new_event">
 		<p>Set event information</p>
 	</div>
-	<div id="playlist_primer">
+	<div class="playlist_primer">
 		<p>Choose up to 5 artists</p>
 	</div>
 </div>
+
+<script type="text/javascript" charset="utf-8">
+  jQuery(function(){
+    new Generator({el: $('.container')});
+  })
+</script>
