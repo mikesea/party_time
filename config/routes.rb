@@ -1,5 +1,5 @@
 PartyTime::Application.routes.draw do
-  root to: "main#index"
+  root to: "playlists#new"
   resources :playlists do
     resource :tracks
   end

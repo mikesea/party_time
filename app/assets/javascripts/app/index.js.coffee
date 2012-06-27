@@ -24,16 +24,43 @@ class Party extends Spine.Controller
     @player = new Player({ el: @playerEl }) 
 
 class Generator extends Spine.Controller
+  @extend(Spine.Events)
+
   elements:
+    ".welcome"          : "welcome"
+    "#get_started"      : "get_started"
     ".new_event"        : "eventEl"
     ".playlist_primer"  : "primerEl"
 
+  events:
+    "click #get_started"  : "createEvent"
+    "click #pick_tracks"  : "pickTracks"
+
   constructor: ->
     super
-    @event = new Event({ el: @eventEl })
-    @primer = new PlaylistPrimer({ el: @primerEl })
+    @routes
+      "/": =>
+        @welcome.show()
+        @eventEl.hide()
+        @primerEl.hide()
+      "/playlist/new/event": =>
+        @welcome.hide()
+        @primerEl.hide()
+        @eventEl.show()
+      "/playlist/new/music": =>
+        @welcome.hide()
+        @eventEl.hide()
+        @primerEl.show()
 
-  # Spine.Route.setup()
+  createEvent: (e) =>
+    e.preventDefault()
+    @navigate("/playlist/new/event")
+
+  pickTracks: (e) =>
+    e.preventDefault()
+    @navigate("/playlist/new/music")
+
+  Spine.Route.setup()
 
 window.Generator = Generator
 window.Party = Party
