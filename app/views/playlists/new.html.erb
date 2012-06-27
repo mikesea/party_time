@@ -9,41 +9,37 @@
       <li>3. Invite your friends to collaborate on the playlist!</li>
     </ul>
 
-    <h3>Sound cool? Let's <a href="#" id="get_started">get started!</a></h3>
+    <h3>Sound cool? Let's <a href="#" id="new_event_form">get started!</a></h3>
   </div>
 
 	<div class="new_event" style="display:none;">
+    <h1>When's the party?</h1>
     <form accept-charset="UTF-8" id="create_event_form">
-      <div style="margin:0;padding:0;display:inline">
-        <input name="utf8" type="hidden" value="&#x2713;" />
-      </div>
       <table>
         <tbody>
           <tr class="event_date">
-            <td><label for="event_date">When's the party?:</label></td>
-            <td><input id="event_date" name="event[date]" type="text"/></td>
-          </tr>
-          <tr>
-            <td><label for="event_name">Name:</label></td>
-            <td><input id="event_name" name="event[name]" type="text" /></td>
-          </tr>
-          <tr>
-            <td><label for="event_details">Details:</label></td>
-            <td><input id="event_details" name="event[details]" type="text" /></td>
-          </tr>
-          <tr>
-            <td><label for="event_location">Where:</label></td>
-            <td><input id="event_location" name="event[location]" type="text" /></td>
+            <td><input id="event_date" name="event[date]" placeholder="July 31, 2012 @ 8pm" type="text"/></td>
           </tr>
         </tbody>
       </table>
     </form>
     <a href="#" id="go_welcome">Back</a>
-    <a href="#" id="pick_tracks">Next Step</a>
+    <a href="#" id="tracks_primer_form">Next Step</a>
 	</div>
 	<div class="playlist_primer" style="display:none;">
-    <a href="#" id="create_event">Back to Event</a>
-    <a href="#" id="generate">Create My Playlist!</a>
+    <h2>Great! Now, choose up to five artists you'd like to play, and we'll generate a playlist of 10 songs for you to start with.</h2>
+    <div class="artists">
+      <ul class="artist-items">
+        <li class="artist-item">
+          <input id="artist" name="artist[]" placeholder="The Black Keys" type="text">
+        </li>
+        <li class="artist-item">
+          <input id="artist" name="artist[]" placeholder="The Black Keys" type="text">
+        </li>
+      </ul>
+    </div>
+    <a href="#" id="new_event_form">Back to Event</a>
+    <button id="generate">Create My Playlist!</button>
 	</div>
 </div>
 

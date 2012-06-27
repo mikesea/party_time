@@ -33,8 +33,9 @@ class Generator extends Spine.Controller
     ".playlist_primer"  : "primerEl"
 
   events:
-    "click #get_started"  : "createEvent"
-    "click #pick_tracks"  : "pickTracks"
+    "click #new_event_form"       : "newEvent"
+    "click #tracks_primer_form"   : "primeTracks"
+    "click #generate"             : "generatePlaylist"
 
   constructor: ->
     super
@@ -52,13 +53,25 @@ class Generator extends Spine.Controller
         @eventEl.hide()
         @primerEl.show()
 
-  createEvent: (e) =>
+  newEvent: (e) =>
     e.preventDefault()
     @navigate("/playlist/new/event")
 
-  pickTracks: (e) =>
+  primeTracks: (e) =>
     e.preventDefault()
     @navigate("/playlist/new/music")
+
+  generatePlaylist: =>
+
+    date = $(".event_date :input").serialize()
+    artists = $(".artist-items :input").serializeArray()
+    info = $("input").serialize()
+    
+    $.ajax {
+      url: "/playlists"
+      data: artists
+      type: "post"
+    }
 
   Spine.Route.setup()
 
