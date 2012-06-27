@@ -2,8 +2,11 @@ class Player extends Spine.Controller
   @extend(Spine.Events)
 
   events:
-    "click .playlist-item" : "playFromPlaylist"
-    "click #play" : "playFromPlayer"
+    "click .playlist-item"  : "playFromPlaylist"
+    "click #play"           : "playFromPlayer"
+    "click #pause"          : "pauseTrack"
+    "click #next"           : "nextTrack"
+    "click #previous"       : "previousTrack"
 
   elements:
     "#api"      : "api"
@@ -14,26 +17,58 @@ class Player extends Spine.Controller
 
   constructor: ->
     super
-    $("#pause").hide()
+    @pause.hide()
     @load()
 
-  playFromPlayer: =>
-    @api.rdio().play(@currentTrack())
+  nextTrack: =>
+    currentTrack = $(".playlist-item.playing")
+    nextTrack = $(".playlist-item.playing").next()
+    if nextTrack.length > 0
+      @playTrack(nextTrack.attr("data-rdio-id"))
+      currentTrack.removeClass("playing")
+      nextTrack.addClass("playing")
+    else
+      return
 
-  playFromPlaylist: (e) =>
-    track = $(e.target).parent().attr("data-rdio-id")
-    @api.rdio().play(track)
+  previousTrack: =>
+    currentTrack = $(".playlist-item.playing")
+    prevTrack = $(".playlist-item.playing").prev()
+    if prevTrack.length > 0
+      @playTrack(prevTrack.attr("data-rdio-id"))
+      currentTrack.removeClass("playing")
+      prevTrack.addClass("playing")
+    else
+      return
+
+  pauseTrack: =>
+    track = $(".playlist-item.playing")
+    track.removeClass("playing")
+    track.addClass("paused")
+
+  playFromPlayer: =>
+    if $(".playlist-item.paused").length > 0
+      track = $(".playlist-item.paused")
+      track.removeClass("paused")
+      @playTrack(track.attr("data-rdio-id"))
+      track.addClass("playing")
+    else
+      track = $(".playlist-item:first")
+      @playTrack(track.attr("data-rdio-id"))
+      track.addClass("playing")
+
+  playTrack: (rdio_id) =>
+    @api.rdio().play(rdio_id)  
 
   currentTrack: =>
-    $("#current-track").attr("data-rdio-id")
+    $(".current").attr("data-rdio-id")
 
   load: =>
     @api.bind "ready.rdio"
 
     $("#api").bind "playingTrackChanged.rdio", (e, playingTrack, sourcePosition) =>
+      @playingTrack = playingTrack
       if playingTrack
         duration = playingTrack.duration
-        console.log playingTrack
         $("#art").attr "src", playingTrack.icon
         $("#track").text playingTrack.name
         $("#album").text playingTrack.album
@@ -51,13 +86,8 @@ class Player extends Spine.Controller
         $("#pause").show()
 
     $("#api").rdio "GAlNi78J_____zlyYWs5ZG02N2pkaHlhcWsyOWJtYjkyN2xvY2FsaG9zdEbwl7EHvbylWSWFWYMZwfc="
-    $("#previous").click ->
-      $("#api").rdio().previous()
 
     $("#pause").click =>
       $("#api").rdio().pause()
-
-    $("#next").click =>
-      $("#api").rdio().next(@nextTrack())
 
 window.Player = Player
