@@ -6,8 +6,7 @@ class PlaylistsController < ApplicationController
   end
 
   def create
-    playlist = Playlist.new
-    playlist.recommend_tracks_from_artists(params[:artists])
+    playlist = Playlist.build_from_artists(params[:artists])
     if playlist.save
       render :json => playlist, :status => :created
     else
