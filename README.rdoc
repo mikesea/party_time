@@ -1,1 +1,3 @@
-Party Time: A social playlist generator for your next party.
+Social playlists for your next gathering.
+
+Powered by: EchoNest, Rdio, and Riak.
