@@ -15,6 +15,14 @@
       "/Users/michaelchlipala/hungry_academy/projects/party_time/app/controllers/application_controller.rb": [
         1,
         1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
         null
       ],
       "/Users/michaelchlipala/hungry_academy/projects/party_time/app/controllers/main_controller.rb": [
@@ -24,6 +32,11 @@
       ],
       "/Users/michaelchlipala/hungry_academy/projects/party_time/app/controllers/playlists_controller.rb": [
         1,
+        null,
+        1,
+        0,
+        null,
+        null,
         1,
         5,
         1,
@@ -41,6 +54,10 @@
         null,
         1,
         0,
+        0,
+        null,
+        0,
+        null,
         null,
         null
       ],
@@ -55,10 +72,28 @@
         0,
         0,
         null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
         null
       ],
       "/Users/michaelchlipala/hungry_academy/projects/party_time/app/controllers/tracks_controller.rb": [
         1,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
         1,
         0,
         null,
@@ -152,6 +187,6 @@
         null
       ]
     },
-    "timestamp": 1340910347
+    "timestamp": 1340914596
   }
 }

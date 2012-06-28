@@ -1,4 +1,9 @@
 class PlaylistsController < ApplicationController
+  
+  def new
+    @playlist = Playlist.new
+  end
+
   def show
     unless @playlist = Playlist.find(params[:id])
       head status: :bad_request
@@ -14,7 +19,11 @@ class PlaylistsController < ApplicationController
     end
   end
 
-  def new
-  	@playlist = Playlist.new
+  def destroy
+    if @playlist
+      @playlist.remove_track
+    else
+      head status: :bad_request
+    end
   end
 end

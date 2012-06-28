@@ -8,4 +8,16 @@ class Playlist
     playlist.tracks += Recommender.recommend_tracks_from_artists(artists)
     playlist
   end
+
+  def remove_track_by_rdio(rdio_id)
+    track = find_track_by_rdio(rdio_id)
+    unless track.nil?
+      tracks.delete(track)
+      save
+    end
+  end
+
+  def find_track_by_rdio(rdio_id)
+    tracks.find { |t| t.rdio_id == rdio_id }
+  end
 end
