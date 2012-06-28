@@ -25,4 +25,5 @@ group :test, :development do
   gem "rack-test", require: "rack/test"
   gem "factory_girl"
   gem "konacha"
+  gem 'simplecov'
 end

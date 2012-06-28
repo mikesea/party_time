@@ -1,5 +1,4 @@
 require 'nestling'
-require 'hashie'
 
 class Recommender
   attr_reader :client
@@ -18,9 +17,9 @@ class Recommender
     tracks = []
     rec.each do |track|
       t = Track.new(
-        artist_name: track.artist_name,
-        title: track.title,
-        rdio_id: track.foreign_ids.first["foreign_id"].split(":").last
+        artist_name: track[:artist_name],
+        title: track[:title],
+        rdio_id: track[:foreign_ids].first["foreign_id"].split(":").last
         )
       tracks << t
     end
