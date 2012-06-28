@@ -2,7 +2,7 @@ class Player extends Spine.Controller
   @extend(Spine.Events)
 
   events:
-    "click .playlist-item"  : "playFromPlaylist"
+    # "click .playlist-item"  : "playFromPlaylist"
     "click #play"           : "playFromPlayer"
     "click #pause"          : "pauseTrack"
     "click #next"           : "nextTrack"

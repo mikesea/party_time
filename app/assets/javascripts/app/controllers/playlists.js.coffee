@@ -1,4 +1,6 @@
 class Playlist extends Spine.Controller
+  @extend(Spine.Events)
+
   elements:
     ".playlist-items" : "tracks"
 
