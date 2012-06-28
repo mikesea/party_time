@@ -4,13 +4,12 @@ require 'hashie'
 class Recommender
   attr_reader :client
 
-  def self.recommend_from_artists(artists=[], client=Nestling.new)
+  def self.recommend_tracks_from_artists(artists=[], client=Nestling.new)
     playlist_rec = client.playlist.static(
       artist: artists,
       bucket: "id:rdio-us-streaming",
       type: "artist-radio",
-      limit: true,
-      results: 10
+      limit: true
      )
     parse_response(playlist_rec)
   end

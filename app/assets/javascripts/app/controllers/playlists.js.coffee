@@ -15,6 +15,6 @@ class Playlist extends Spine.Controller
     @tracks.append @template(track)
 
   template: (track) ->
-    @view('playlists/song')(track)
+    @view('playlists/track')(track)
 
 window.Playlist = Playlist

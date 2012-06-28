@@ -1,50 +1,38 @@
 <div class="container">
   <div class="welcome">
-    <h1>Let's Have a Party</h1>
+    <h1>Party Time!</h1>
     <h2>Social playlists for your next gathering.</h2>
 
     <ul><h3>Getting started is simple:</h3>
-      <li>1. Set a date for your party</li>
-      <li>2. Pick a few artists to set the mood for the event</li>
-      <li>3. Invite your friends to collaborate on the playlist!</li>
+      <li>1. Pick up to five artists to set the mood for your party.</li>
+      <li>2. We'll craft a playlist of 10 songs to get things starated.</li>
+      <li>3. Invite your friends to collaborate on the playlist.</li>
     </ul>
-
-    <h3>Sound cool? Let's <a href="#" id="new_event_form">get started!</a></h3>
   </div>
-
-	<div class="new_event" style="display:none;">
-    <h1>When's the party?</h1>
-    <form accept-charset="UTF-8" id="create_event_form">
-      <table>
-        <tbody>
-          <tr class="event_date">
-            <td><input id="event_date" name="event[date]" placeholder="July 31, 2012 @ 8pm" type="text"/></td>
-          </tr>
-        </tbody>
-      </table>
-    </form>
-    <a href="#" id="go_welcome">Back</a>
-    <a href="#" id="tracks_primer_form">Next Step</a>
-	</div>
-	<div class="playlist_primer" style="display:none;">
-    <h2>Great! Now, choose up to five artists you'd like to play, and we'll generate a playlist of 10 songs for you to start with.</h2>
+	<div class="recommender">
+    <h2>Choose a few artists</h2>
     <div class="artists">
       <ul class="artist-items">
         <li class="artist-item">
-          <input id="artist" name="artist[]" placeholder="The Black Keys" type="text">
+          <input id="artist" name="artists[]" placeholder="The Black Keys" type="text">
         </li>
         <li class="artist-item">
-          <input id="artist" name="artist[]" placeholder="The Black Keys" type="text">
+          <input id="artist" name="artists[]" placeholder="Weezer" type="text">
+        </li>
+        <li class="artist-item">
+          <input id="artist" name="artists[]" placeholder="Michelle Branch" type="text">
         </li>
       </ul>
     </div>
-    <a href="#" id="new_event_form">Back to Event</a>
-    <button id="generate">Create My Playlist!</button>
+    <button id="recommend">Create My Playlist!</button>
 	</div>
+</div>
+<div id="loading" style="display:none">
+  <h1>Loading!</h1>
 </div>
 
 <script type="text/javascript" charset="utf-8">
   jQuery(function(){
-    new Generator({el: $('.container')});
+    new Recommender({el: $('.container')});
   })
 </script>

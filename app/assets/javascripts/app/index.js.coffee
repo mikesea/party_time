@@ -23,57 +23,34 @@ class Party extends Spine.Controller
     @playlist = new Playlist({ el: @playlistEl })
     @player = new Player({ el: @playerEl }) 
 
-class Generator extends Spine.Controller
+class Recommender extends Spine.Controller
   @extend(Spine.Events)
 
-  elements:
-    ".welcome"          : "welcome"
-    "#get_started"      : "get_started"
-    ".new_event"        : "eventEl"
-    ".playlist_primer"  : "primerEl"
-
   events:
-    "click #new_event_form"       : "newEvent"
-    "click #tracks_primer_form"   : "primeTracks"
-    "click #generate"             : "generatePlaylist"
+    "click #recommend" : "recommendPlaylist"
+
+  elements:
+    ".track_preview_items" : "track_items"
 
   constructor: ->
     super
-    @routes
-      "/": =>
-        @welcome.show()
-        @eventEl.hide()
-        @primerEl.hide()
-      "/playlist/new/event": =>
-        @welcome.hide()
-        @primerEl.hide()
-        @eventEl.show()
-      "/playlist/new/music": =>
-        @welcome.hide()
-        @eventEl.hide()
-        @primerEl.show()
 
-  newEvent: (e) =>
-    e.preventDefault()
-    @navigate("/playlist/new/event")
-
-  primeTracks: (e) =>
-    e.preventDefault()
-    @navigate("/playlist/new/music")
-
-  generatePlaylist: =>
-
-    date = $(".event_date :input").serialize()
+  recommendPlaylist: =>
     artists = $(".artist-items :input").serializeArray()
-    info = $("input").serialize()
-    
-    $.ajax {
+    $.ajax
       url: "/playlists"
       data: artists
       type: "post"
-    }
+      success: (data) =>
+        location.href = "/playlists/#{data.playlist.key}"
+      error: (data) =>
+        console.log data
 
-  Spine.Route.setup()
+    @loading()
 
-window.Generator = Generator
+  loading: =>
+    $(".container").hide()
+    $("#loading").show()
+
+window.Recommender = Recommender
 window.Party = Party

@@ -6,14 +6,13 @@ class PlaylistsController < ApplicationController
   end
 
   def create
-    raise params[:artist].class.inspect
-    # PLaylist.create_with_event(params[:event])
-    #raise @event.inspect
-    # if @playlist = Playlist.create_with_event(params[:event])
-      # return json response with playlist key
-    # else
-    #   #return error
-    # end
+    playlist = Playlist.new
+    playlist.recommend_tracks_from_artists(params[:artists])
+    if playlist.save
+      render :json => playlist, :status => :created
+    else
+      head status: :bad_request
+    end
   end
 
   def new
