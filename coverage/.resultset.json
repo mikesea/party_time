@@ -86,6 +86,44 @@
         null,
         null
       ],
+      "/Users/michaelchlipala/hungry_academy/projects/party_time/app/controllers/searches_controller.rb": [
+        1,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/michaelchlipala/hungry_academy/projects/party_time/app/models/search.rb": [
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null,
+        null,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
       "/Users/michaelchlipala/hungry_academy/projects/party_time/app/controllers/tracks_controller.rb": [
         1,
         1,
@@ -186,36 +224,8 @@
         1,
         null,
         null
-      ],
-      "/Users/michaelchlipala/hungry_academy/projects/party_time/app/models/search.rb": [
-        1,
-        null,
-        1,
-        0,
-        null,
-        null,
-        null,
-        null,
-        0,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        null,
-        null,
-        null,
-        null,
-        null,
-        0,
-        null,
-        0,
-        null,
-        null,
-        null
       ]
     },
-    "timestamp": 1340987307
+    "timestamp": 1340988873
   }
 }

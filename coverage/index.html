@@ -23,27 +23,27 @@
       <img src="./assets/0.5.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2012-06-29T12:28:27-04:00">2012-06-29T12:28:27-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2012-06-29T12:54:33-04:00">2012-06-29T12:54:33-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">76.32%</span></span>
+    (<span class="covered_percent"><span class="red">75.42%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.81
+         0.78
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>12</b> files in total.
-    <b>114</b> relevant lines. 
-    <span class="green"><b>87</b> lines covered</span> and
-    <span class="red"><b>27</b> lines missed </span>
+    <b>13</b> files in total.
+    <b>118</b> relevant lines. 
+    <span class="green"><b>89</b> lines covered</span> and
+    <span class="red"><b>29</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -87,6 +87,16 @@
         <td>7</td>
         <td>8</td>
         <td>0.7</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#998a467d404b2efb59dc9235acd2ef8ff23d0429" class="src_link" title="app/controllers/searches_controller.rb">app/controllers/searches_controller.rb</a></td>
+        <td class="red strong">50.0 %</td>
+        <td>8</td>
+        <td>4</td>
+        <td>2</td>
+        <td>2</td>
+        <td>0.5</td>
       </tr>
       
       <tr>
@@ -188,20 +198,20 @@
           <div class="file_list_container" id="Controllers">
   <h2>
     <span class="group_name">Controllers</span>
-    (<span class="covered_percent"><span class="red">62.07%</span></span>
+    (<span class="covered_percent"><span class="red">60.61%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.8
+         0.74
        </span>
     </span> hits/line)
   </h2>
   <a name="Controllers"></a>
   <div>
-    <b>4</b> files in total.
-    <b>29</b> relevant lines. 
-    <span class="green"><b>18</b> lines covered</span> and
-    <span class="red"><b>11</b> lines missed </span>
+    <b>5</b> files in total.
+    <b>33</b> relevant lines. 
+    <span class="green"><b>20</b> lines covered</span> and
+    <span class="red"><b>13</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -245,6 +255,16 @@
         <td>7</td>
         <td>8</td>
         <td>0.7</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#998a467d404b2efb59dc9235acd2ef8ff23d0429" class="src_link" title="app/controllers/searches_controller.rb">app/controllers/searches_controller.rb</a></td>
+        <td class="red strong">50.0 %</td>
+        <td>8</td>
+        <td>4</td>
+        <td>2</td>
+        <td>2</td>
+        <td>0.5</td>
       </tr>
       
       <tr>
@@ -840,6 +860,72 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="29">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="998a467d404b2efb59dc9235acd2ef8ff23d0429">
+  <div class="header">
+    <h3>app/controllers/searches_controller.rb</h3>
+    <h4><span class="red">50.0 %</span> covered</h4>
+    <div>
+      <b>4</b> relevant lines. 
+      <span class="green"><b>2</b> lines covered</span> and
+      <span class="red"><b>2</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class SearchesController &lt; ApplicationController</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def create</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="4">
+          
+          
+          <code class="ruby">    search = Search.search_for_tracks(params[:query])</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="5">
+          
+          
+          <code class="ruby">    render :json =&gt; search, :status =&gt; :ok</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
           
           
           <code class="ruby">end</code>

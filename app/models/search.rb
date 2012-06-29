@@ -12,13 +12,14 @@ class Search
   def self.parse_rdio_response(response)
     tracks = []
     response.each do |track|
-      t = Track.new(
-        artist_name: track[:artist],
-        album_title: track[:album],
-        title: track[:name],
-        rdio_id: track[:key]
-        )
-      tracks << t
+      if track.canStream
+        t = Track.new(
+          artist_name: track[:artist],
+          album_title: track[:album],
+          title: track[:name],
+          rdio_id: track[:key])
+        tracks << t
+      end
     end
     tracks
   end

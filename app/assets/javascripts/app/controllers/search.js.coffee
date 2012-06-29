@@ -6,6 +6,7 @@ class Search extends Spine.Controller
 
   elements:
     "#query" : "query"
+    ".search_items" : "results"
 
   constructor: ->
     super
@@ -21,7 +22,8 @@ class Search extends Spine.Controller
       data: 'query': query
       type: "post"
       success: (data) =>
-        console.log data
+        for track in data
+          @results.append "<li>Arist: #{track.track.artist_name}# // Album: #{track.track.album_title} - #{track.track.title}</li>"
       error: (data) =>
         console.log data
     
