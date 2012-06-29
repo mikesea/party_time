@@ -4,6 +4,9 @@ class Playlist extends Spine.Controller
   elements:
     ".playlist-items" : "tracks"
 
+  events:
+    "click button#remove_track" : "removeTrack"
+
   constructor: ->
     super
     Track.bind 'refresh', @addAll
