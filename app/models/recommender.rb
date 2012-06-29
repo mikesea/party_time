@@ -4,18 +4,18 @@ class Recommender
   attr_reader :client
 
   def self.recommend_tracks_from_artists(artists=[], client=Nestling.new)
-    playlist_rec = client.playlist.static(
+    response = client.playlist.static(
       artist: artists,
       bucket: "id:rdio-us-streaming",
       type: "artist-radio",
       limit: true
      )
-    parse_response(playlist_rec)
+    parse_echonest_response(response)
   end
 
-  def self.parse_response(rec)
+  def self.parse_echonest_response(response)
     tracks = []
-    rec.each do |track|
+    response.each do |track|
       t = Track.new(
         artist_name: track[:artist_name],
         title: track[:title],

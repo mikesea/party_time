@@ -14,7 +14,7 @@
     <link href='./assets/0.5.3/highlight.css' media='screen, projection, print' rel='stylesheet' type='text/css'>
     <link href='./assets/0.5.3/fancybox/jquery.fancybox-1.3.1.css' media='screen, projection, print' rel='stylesheet' type='text/css'>
     <link href='./assets/0.5.3/smoothness/jquery-ui-1.8.4.custom.css' media='screen, projection, print' rel='stylesheet' type='text/css'>    
-    <link rel="shortcut icon" type="image/png" href="./assets/0.5.3/favicon_yellow.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/0.5.3/favicon_red.png" />
     <link rel="icon" type="image/png" href="./assets/0.5.3/favicon.png" />
   </head>
   
@@ -23,27 +23,27 @@
       <img src="./assets/0.5.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2012-06-28T16:16:36-04:00">2012-06-28T16:16:36-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2012-06-29T12:28:27-04:00">2012-06-29T12:28:27-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">80.58%</span></span>
+    (<span class="covered_percent"><span class="red">76.32%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.85
+         0.81
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>11</b> files in total.
-    <b>103</b> relevant lines. 
-    <span class="green"><b>83</b> lines covered</span> and
-    <span class="red"><b>20</b> lines missed </span>
+    <b>12</b> files in total.
+    <b>114</b> relevant lines. 
+    <span class="green"><b>87</b> lines covered</span> and
+    <span class="red"><b>27</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -160,11 +160,21 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#e9c3c16b769bfde224bfd14c5fa0cd81b9c81303" class="src_link" title="app/models/search.rb">app/models/search.rb</a></td>
+        <td class="red strong">30.0 %</td>
+        <td>26</td>
+        <td>10</td>
+        <td>3</td>
+        <td>7</td>
+        <td>0.3</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#743dbc342a6542a72fb2dcfcda7723b85677da2e" class="src_link" title="app/models/track.rb">app/models/track.rb</a></td>
         <td class="green strong">100.0 %</td>
+        <td>8</td>
         <td>7</td>
-        <td>6</td>
-        <td>6</td>
+        <td>7</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -255,20 +265,20 @@
           <div class="file_list_container" id="Models">
   <h2>
     <span class="group_name">Models</span>
-    (<span class="covered_percent"><span class="yellow">88.57%</span></span>
+    (<span class="covered_percent"><span class="yellow">81.48%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.9
+         0.8
        </span>
     </span> hits/line)
   </h2>
   <a name="Models"></a>
   <div>
-    <b>5</b> files in total.
-    <b>70</b> relevant lines. 
-    <span class="green"><b>62</b> lines covered</span> and
-    <span class="red"><b>8</b> lines missed </span>
+    <b>6</b> files in total.
+    <b>81</b> relevant lines. 
+    <span class="green"><b>66</b> lines covered</span> and
+    <span class="red"><b>15</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -325,11 +335,21 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#e9c3c16b769bfde224bfd14c5fa0cd81b9c81303" class="src_link" title="app/models/search.rb">app/models/search.rb</a></td>
+        <td class="red strong">30.0 %</td>
+        <td>26</td>
+        <td>10</td>
+        <td>3</td>
+        <td>7</td>
+        <td>0.3</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#743dbc342a6542a72fb2dcfcda7723b85677da2e" class="src_link" title="app/models/track.rb">app/models/track.rb</a></td>
         <td class="green strong">100.0 %</td>
+        <td>8</td>
         <td>7</td>
-        <td>6</td>
-        <td>6</td>
+        <td>7</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -894,7 +914,7 @@
         <li class="missed" data-hits="0" data-linenumber="9">
           
           
-          <code class="ruby">    @playlist.remove_track(params[:rdio_id])</code>
+          <code class="ruby">    @playlist.remove_track_by_rdio(params[:rdio_id])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
@@ -1374,13 +1394,13 @@
         <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
-          <code class="ruby">  def remove_track(rdio_id)</code>
+          <code class="ruby">  def remove_track_by_rdio(rdio_id)</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="13">
           
           
-          <code class="ruby">    track = find_track(rdio_id)</code>
+          <code class="ruby">    track = find_track_by_rdio(rdio_id)</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="14">
@@ -1422,7 +1442,7 @@
         <li class="covered" data-hits="1" data-linenumber="20">
           <span class="hits">1</span>
           
-          <code class="ruby">  def find_track(rdio_id)</code>
+          <code class="ruby">  def find_track_by_rdio(rdio_id)</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="21">
@@ -1500,7 +1520,7 @@
         <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
-          <code class="ruby">    playlist_rec = client.playlist.static(</code>
+          <code class="ruby">    response = client.playlist.static(</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="8">
@@ -1536,7 +1556,7 @@
         <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
-          <code class="ruby">    parse_response(playlist_rec)</code>
+          <code class="ruby">    parse_echonest_response(response)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
@@ -1554,7 +1574,7 @@
         <li class="covered" data-hits="1" data-linenumber="16">
           <span class="hits">1</span>
           
-          <code class="ruby">  def self.parse_response(rec)</code>
+          <code class="ruby">  def self.parse_echonest_response(response)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="17">
@@ -1566,7 +1586,7 @@
         <li class="covered" data-hits="1" data-linenumber="18">
           <span class="hits">1</span>
           
-          <code class="ruby">    rec.each do |track|</code>
+          <code class="ruby">    response.each do |track|</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="19">
@@ -1633,13 +1653,187 @@
   </pre>
 </div>
       
+        <div class="source_table" id="e9c3c16b769bfde224bfd14c5fa0cd81b9c81303">
+  <div class="header">
+    <h3>app/models/search.rb</h3>
+    <h4><span class="red">30.0 %</span> covered</h4>
+    <div>
+      <b>10</b> relevant lines. 
+      <span class="green"><b>3</b> lines covered</span> and
+      <span class="red"><b>7</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Search</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.search_for_tracks(query)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="4">
+          
+          
+          <code class="ruby">    response = RDIO.search(</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby">      query: query,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby">      types: &quot;track&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">      count: 5</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">      ).results</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="9">
+          
+          
+          <code class="ruby">    parse_rdio_response(response)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.parse_rdio_response(response)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="13">
+          
+          
+          <code class="ruby">    tracks = []</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="14">
+          
+          
+          <code class="ruby">    response.each do |track|</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="15">
+          
+          
+          <code class="ruby">      t = Track.new(</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby">        artist_name: track[:artist],</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">        album_title: track[:album],</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby">        title: track[:name],</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby">        rdio_id: track[:key]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby">        )</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="21">
+          
+          
+          <code class="ruby">      tracks &lt;&lt; t</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="23">
+          
+          
+          <code class="ruby">    tracks</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
         <div class="source_table" id="743dbc342a6542a72fb2dcfcda7723b85677da2e">
   <div class="header">
     <h3>app/models/track.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>6</b> relevant lines. 
-      <span class="green"><b>6</b> lines covered</span> and
+      <b>7</b> relevant lines. 
+      <span class="green"><b>7</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1668,22 +1862,28 @@
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">  property :title, String</code>
+          <code class="ruby">  property :album_title, String</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
-          <code class="ruby">  property :rdio_id, String</code>
+          <code class="ruby">  property :title, String</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
+          <code class="ruby">  property :rdio_id, String</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
           <code class="ruby">  embedded_in :playlist</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="7">
+        <li class="never" data-hits="" data-linenumber="8">
           
           
           <code class="ruby">end</code>

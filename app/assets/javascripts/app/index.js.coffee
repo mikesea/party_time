@@ -19,9 +19,9 @@ class Party extends Spine.Controller
 
   constructor: ->
     super
-    @search = new Search({ el: @searchEl })
     @playlist = new Playlist({ el: @playlistEl })
-    @player = new Player({ el: @playerEl }) 
+    @player = new Player({ el: @playerEl })
+    @search = new Search({ el: @searchEl })
 
 class Recommender extends Spine.Controller
   @extend(Spine.Events)

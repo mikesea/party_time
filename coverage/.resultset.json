@@ -106,6 +106,7 @@
         1,
         1,
         1,
+        1,
         null
       ],
       "/Users/michaelchlipala/hungry_academy/projects/party_time/app/models/event.rb": [
@@ -185,8 +186,36 @@
         1,
         null,
         null
+      ],
+      "/Users/michaelchlipala/hungry_academy/projects/party_time/app/models/search.rb": [
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null,
+        null,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null
       ]
     },
-    "timestamp": 1340914596
+    "timestamp": 1340987307
   }
 }

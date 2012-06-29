@@ -2,16 +2,28 @@ class Search extends Spine.Controller
   @extend(Spine.Events)
 
   events:
-    "submit #artist_search_form" : "search"
+    "submit #search_form" : "search"
 
   elements:
-    "#artist_search_form" : "artist_search"    
+    "#query" : "query"
 
   constructor: ->
     super
+    console.log @el
 
   search: (e) ->
     e.preventDefault()
-    console.log @artist_search
+    query = @query.val()
+    return false unless query
+
+    $.ajax
+      url: "/search"
+      data: 'query': query
+      type: "post"
+      success: (data) =>
+        console.log data
+      error: (data) =>
+        console.log data
+    
 
 window.Search = Search
