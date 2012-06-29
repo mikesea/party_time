@@ -12,7 +12,7 @@ gem 'ripple', git: 'https://github.com/seancribbs/ripple.git'
 gem 'jbuilder'
 gem 'bson_ext'
 gem 'chronic'
-gem 'twitter-bootstrap-rails'
+gem 'bootstrap-sass', '~> 2.0.4.0'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

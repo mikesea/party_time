@@ -1,37 +1,39 @@
-<div class="container">
-  <div class="welcome">
-    <h1>Party Time!</h1>
-    <h2>Social playlists for your next gathering.</h2>
+<div class="container center" style="margin-top: 20px;">
+  <div class="well span5 offset3">
+    <header class="welcome">
+      <h1>Party Time!</h1>
+      <h3>Social playlists for your next gathering.</h3>
 
-    <ul><h3>Getting started is simple:</h3>
-      <li>1. Pick up to five artists to set the mood for your party.</li>
-      <li>2. We'll craft a playlist of 15 songs to get things starated.</li>
-      <li>3. Invite your friends to collaborate on the playlist.</li>
-    </ul>
-  </div>
-	<div class="recommender">
-    <h2>Choose a few artists</h2>
-    <div class="artists">
-      <ul class="artist-items">
-        <li class="artist-item">
-          <input id="artist" name="artists[]" placeholder="The Black Keys" type="text">
-        </li>
-        <li class="artist-item">
-          <input id="artist" name="artists[]" placeholder="NSYNC" type="text">
-        </li>
-        <li class="artist-item">
-          <input id="artist" name="artists[]" placeholder="Bob Dylan" type="text">
-        </li>
-        <li class="artist-item">
-          <input id="artist" name="artists[]" placeholder="Bon Iver" type="text">
-        </li>
-        <li class="artist-item">
-          <input id="artist" name="artists[]" placeholder="Raffi" type="text">
-        </li>
+      <ul><h4>Getting started is simple:</h3>
+        <li>1. Pick up to five artists to set the mood for your party.</li>
+        <li>2. We'll craft a playlist of 15 songs to get things starated.</li>
+        <li>3. Invite your friends to collaborate on the playlist.</li>
       </ul>
-    </div>
-    <button id="recommend">Create My Playlist!</button>
-	</div>
+    </header>
+    <h2>Choose a few artists</h2>
+  	<div class="recommender">
+      <div class="artists">
+        <ul class="artist-items">
+          <li class="artist-item">
+            <input id="artist" name="artists[]" placeholder="The Black Keys" type="text">
+          </li>
+          <li class="artist-item">
+            <input id="artist" name="artists[]" placeholder="NSYNC" type="text">
+          </li>
+          <li class="artist-item">
+            <input id="artist" name="artists[]" placeholder="Bob Dylan" type="text">
+          </li>
+          <li class="artist-item">
+            <input id="artist" name="artists[]" placeholder="Bon Iver" type="text">
+          </li>
+          <li class="artist-item">
+            <input id="artist" name="artists[]" placeholder="Raffi" type="text">
+          </li>
+        </ul>
+      </div>
+      <button class="btn btn-primary" id="recommend">Create My Playlist!</button>
+  	</div>
+  </div>
 </div>
 <div id="loading" style="display:none">
   <h1>Loading!</h1>

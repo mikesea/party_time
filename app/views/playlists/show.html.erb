@@ -2,20 +2,12 @@
   <%= playlist_id_tag %>
 <% end %>
 
-<h1>Playlist</h1>
-
-<div class="container">
-  <div class="search">
-    <form id='artist_search_form'>
-      <input type='text' id='artist_search_box' placeholder='The Black Keys' />
-      <input type='submit' value='Search' />
-    </form>
-  </div>
-
-  <div class="player">
-    <div id="api"></div>
-    <img id="art" src="" height="200" width="200" style="float:left;margin-right:20px;">
-    <div>
+<div class="container" style="margin-top: 20px;">
+  <h1>Playlist</h1>
+  <div class="row span4">
+    <div class="player well">
+      <div id="api"></div>
+      <img id="art" src="" height="200" width="200">
       <div><b>Track: </b><span id="track"></span></div>
       <div><b>Album: </b><span id="album"></span></div>
       <div><b>Artist: </b><span id="artist"></span></div>
@@ -30,10 +22,17 @@
         <button id="next">&gt;&gt;</button>
       </div>
     </div>
-    <div class="playlist">
-      <ul class="playlist-items">
-      </ul>
+    <div class="search">
+      <form id='artist_search_form'>
+        <input type='text' id='artist_search_box' placeholder='The Black Keys' />
+        <input type='submit' value='Search' />
+      </form>
     </div>
+  </div>
+  <div class="playlist well span6">
+    <h2>Tracks</h2>
+    <ul class="playlist-items">
+    </ul>
   </div>
 </div>
 
