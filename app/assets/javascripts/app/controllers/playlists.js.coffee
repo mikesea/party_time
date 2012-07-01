@@ -10,6 +10,7 @@ class Playlist extends Spine.Controller
   constructor: ->
     super
     Track.bind 'refresh', @addAll
+    Track.bind 'create', @addOne
     Track.fetch()
 
   addAll: =>
@@ -17,7 +18,8 @@ class Playlist extends Spine.Controller
       @addOne(track)
 
   addOne: (track) =>
-    @tracks.append @template(track)
+    unless track.isSearch
+      @tracks.append @template(track)
 
   template: (track) ->
     @view('playlists/track')(track)

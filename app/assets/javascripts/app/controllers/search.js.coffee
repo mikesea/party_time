@@ -10,7 +10,7 @@ class Search extends Spine.Controller
 
   constructor: ->
     super
-    console.log @el
+    Track.bind 'create', @addResult
 
   search: (e) ->
     e.preventDefault()
@@ -22,10 +22,23 @@ class Search extends Spine.Controller
       data: 'query': query
       type: "post"
       success: (data) =>
-        for track in data
-          @results.append "<li>Arist: #{track.track.artist_name}# // Album: #{track.track.album_title} - #{track.track.title}</li>"
+        @results.empty()
+        for obj in data
+          Track.create
+            artist_name: obj.track.artist_name,
+            title: obj.track.title,
+            album_title: obj.track.album_title,
+            isSearch: true, 
+            { ajax: false }
       error: (data) =>
         console.log data
+
+  addResult: (track) =>
+    if track.isSearch
+      @results.append @template(track)
+
+  template: (track) =>
+    @view('playlists/track')(track)
     
 
 window.Search = Search
