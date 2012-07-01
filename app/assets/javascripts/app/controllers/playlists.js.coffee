@@ -18,8 +18,7 @@ class Playlist extends Spine.Controller
       @addOne(track)
 
   addOne: (track) =>
-    unless track.isSearch
-      @tracks.append @template(track)
+    @tracks.append @template(track)
 
   template: (track) ->
     @view('playlists/track')(track)

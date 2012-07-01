@@ -3,14 +3,15 @@ class Search extends Spine.Controller
 
   events:
     "submit #search_form" : "search"
+    "click #add_to_playlist" : "addToPlaylist"
 
   elements:
     "#query" : "query"
     ".search_items" : "results"
 
   constructor: ->
-    super
-    Track.bind 'create', @addResult
+    super 
+    SearchTrack.bind 'create', @addResult
 
   search: (e) ->
     e.preventDefault()
@@ -21,24 +22,31 @@ class Search extends Spine.Controller
       url: "/search"
       data: 'query': query
       type: "post"
-      success: (data) =>
+      success: (tracks) =>
         @results.empty()
-        for obj in data
-          Track.create
-            artist_name: obj.track.artist_name,
-            title: obj.track.title,
-            album_title: obj.track.album_title,
-            isSearch: true, 
+        for track in tracks
+          SearchTrack.create
+            id: track.id
+            artist_name: track.artist_name,
+            title: track.title,
+            album_title: track.album_title,
             { ajax: false }
       error: (data) =>
         console.log data
 
+  trackExists: (track) =>
+    if Track.find(track.id)
+      return true
+
+  addToPlaylist: (e) ->
+    id = $(e.target).parent().attr("data-rdio-id")
+    track = SearchTrack.find(id)
+    track.addToPlaylist()
+
   addResult: (track) =>
-    if track.isSearch
-      @results.append @template(track)
+    @results.append @template(track)
 
   template: (track) =>
-    @view('playlists/track')(track)
-    
+    @view('searches/search_track')(track)
 
 window.Search = Search

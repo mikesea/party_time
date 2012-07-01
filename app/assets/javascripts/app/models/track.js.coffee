@@ -1,5 +1,5 @@
 class Track extends Spine.Model
-  @configure 'Track', 'artist_name', 'title', 'rdio_id', 'isSearch', 'album_title'
+  @configure 'Track', 'artist_name', 'title', 'rdio_id', 'album_title'
   @extend Spine.Model.Ajax
 
   @url: -> "/playlists/#{@playlist()}/tracks"

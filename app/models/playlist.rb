@@ -9,6 +9,13 @@ class Playlist
     playlist
   end
 
+  def add_track(track)
+    unless find_track_by_rdio(track.rdio_id)
+      tracks << track
+      save
+    end
+  end
+
   def remove_track_by_rdio(rdio_id)
     track = find_track_by_rdio(rdio_id)
     unless track.nil?
