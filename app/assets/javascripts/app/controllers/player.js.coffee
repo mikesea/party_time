@@ -49,7 +49,8 @@ class Player extends Spine.Controller
         $("#play").hide()
         $("#pause").show()
 
-    @api.rdio "GAlNi78J_____zlyYWs5ZG02N2pkaHlhcWsyOWJtYjkyN2xvY2FsaG9zdEbwl7EHvbylWSWFWYMZwfc="
+    # @api.rdio "GAlNi78J_____zlyYWs5ZG02N2pkaHlhcWsyOWJtYjkyN2xvY2FsaG9zdEbwl7EHvbylWSWFWYMZwfc="
+    @api.rdio "GAlP8gcP_____zczYXZ3Z3BmMmNhazRqemNnbmR2bmZoZnBhcnR5LmRldv0hysAh2gMfJLP3CwlLCz4="
 
     $("#play").click ->
       $("#api").rdio().play()
