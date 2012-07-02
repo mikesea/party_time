@@ -51,7 +51,7 @@ class Player extends Spine.Controller
 
     # @api.rdio "GAlNi78J_____zlyYWs5ZG02N2pkaHlhcWsyOWJtYjkyN2xvY2FsaG9zdEbwl7EHvbylWSWFWYMZwfc="
     # @api.rdio "GAlP8gcP_____zczYXZ3Z3BmMmNhazRqemNnbmR2bmZoZnBhcnR5LmRldv0hysAh2gMfJLP3CwlLCz4="
-    @api.rdio "GB5P8hI7_____zczYXZ3Z3BmMmNhazRqemNnbmR2bmZoZmVtcHR5LXN3b3JkLTExNjAuaGVyb2t1YXBwLmNvbRIJaLWR_xeKfyH4U67UYj0="
+    @api.rdio "GBdP8ion_____zczYXZ3Z3BmMmNhazRqemNnbmR2bmZoZnBhcnR5dGltZS5oZXJva3VhcHAuY29t6-jOKAYwfsJNHth-UzvDag=="
 
     $("#play").click ->
       $("#api").rdio().play()
