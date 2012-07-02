@@ -33,4 +33,8 @@ class LivingSocialDeal
     [[:division_latlon, Mongo::GEO2D]], background: true
   )
 
+  def self.get_national_deal
+    LivingSocialDeal.where(national: "true", sold_out: "false", country_code: "US").first
+  end
+
 end

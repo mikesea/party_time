@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require handlebars
+//= require bootstrap-modal
 //= require app
 //= require jquery.rdio
 //= require_tree .

@@ -30,10 +30,12 @@ class Recommender extends Spine.Controller
     "click #recommend" : "recommendPlaylist"
 
   elements:
+    ".modal"    : "modalEl"
     ".track_preview_items" : "track_items"
 
   constructor: ->
     super
+    @dealer = new Dealer({ el: @modalEl })
 
   recommendPlaylist: =>
     artists = $(".artist-items :input").serializeArray()
@@ -42,15 +44,14 @@ class Recommender extends Spine.Controller
       data: artists
       type: "post"
       success: (data) =>
-        location.href = "/playlists/#{data.playlist.key}"
+        $(".modal-footer").append "<a href='/playlists/#{data.playlist.key}' class='btn btn-success'>It's ready! Check out your playlist!</a>"
       error: (data) =>
         console.log data
 
     @loading()
 
   loading: =>
-    $(".container").hide()
-    $("#loading").show()
+    $('#loading').modal('show')
 
 window.Recommender = Recommender
 window.Party = Party

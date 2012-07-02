@@ -1,6 +1,29 @@
 require 'spec_helper'
 
 describe "Playlists" do
+  describe "#create" do
+    context "creating a new playlist" do
+    
+      let(:tracks) { FactoryGirl.build_list(:track, 15) }
+      let(:params) { {:artists => ["Bon Iver", "Rolling Stones", "The Black Keys", "The Beatles"]}}
+
+      before(:each) do
+        Recommender.stub(:recommend_tracks_from_artists).and_return(tracks)
+        post playlists_url(format: :json), params
+      end
+
+      it "returns a new playlist with 15 tracks" do
+        response_json = JSON.parse(response.body)
+        response_json['playlist']['tracks'].count.should be 15
+      end
+
+      it "returns a Riak-generated key for the playlist" do
+        response_json = JSON.parse(response.body)
+        response_json['playlist']['key'].should_not be nil
+      end
+    end
+  end
+
   describe "#show" do
     context "the playlist exists" do
       

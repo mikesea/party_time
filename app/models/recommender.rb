@@ -5,8 +5,7 @@ class Recommender
       artist: artists,
       bucket: "id:rdio-us-streaming",
       type: "artist-radio",
-      limit: true
-     )
+      limit: true)
     parse_echonest_response(response)
   end
 
@@ -16,8 +15,7 @@ class Recommender
       t = Track.new(
         artist_name: track[:artist_name],
         title: track[:title],
-        rdio_id: track[:foreign_ids].first["foreign_id"].split(":").last
-        )
+        rdio_id: track[:foreign_ids].first["foreign_id"].split(":").last)
       tracks << t
     end
     tracks
