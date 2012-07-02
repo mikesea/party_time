@@ -38,7 +38,10 @@ class Recommender extends Spine.Controller
     @dealer = new Dealer({ el: @modalEl })
 
   recommendPlaylist: =>
+    return false unless $(".artist-items :input").val()
+    
     artists = $(".artist-items :input").serializeArray()
+
     $.ajax
       url: "/playlists"
       data: artists
