@@ -44,14 +44,15 @@ class Recommender extends Spine.Controller
       data: artists
       type: "post"
       success: (data) =>
-        $(".modal-footer").append "<a href='/playlists/#{data.playlist.key}' class='btn btn-success'>It's ready! Check out your playlist!</a>"
+        $(".modal-footer").empty()
+        $(".modal-footer").append "<a href='/playlists/#{data.playlist.key}' class='btn btn-success btn-large'>It's ready! Check out your playlist!</a>"
       error: (data) =>
         console.log data
 
     @loading()
 
   loading: =>
-    $('#loading').modal('show')
+    $('#loading').modal()
 
 window.Recommender = Recommender
 window.Party = Party
