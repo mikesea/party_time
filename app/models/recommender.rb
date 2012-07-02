@@ -1,7 +1,4 @@
-require 'nestling'
-
 class Recommender
-  attr_reader :client
 
   def self.recommend_tracks_from_artists(artists=[], client=Nestling.new)
     response = client.playlist.static(

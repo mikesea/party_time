@@ -17,7 +17,6 @@ test:
   pb_port: 9002
   host: 127.0.0.1
   source: /usr/local/bin   # Default for Homebrew.
-  js_source_dir: <%= Rails.root + "app/mapreduce" %>
 
 production:
   http_port: 8098

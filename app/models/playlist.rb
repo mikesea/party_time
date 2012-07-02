@@ -16,6 +16,11 @@ class Playlist
     end
   end
 
+  def remove_track(track)
+    tracks.delete(track)
+    save
+  end
+
   def remove_track_by_rdio(rdio_id)
     track = find_track_by_rdio(rdio_id)
     unless track.nil?
