@@ -12,7 +12,6 @@ production:
   password: hungry
   port: 27019
 
-
 test:
   host: localhost
   database: party_time_test
