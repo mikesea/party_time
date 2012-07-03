@@ -14,7 +14,8 @@ class SearchTrack extends Spine.Model
       }
       type: "post"
       success: (track) =>
-        $(".search_items").empty()
+        $(".search-alert").empty()
+        $(".search-alert").append "<p>Success! Added to your playlist</p>"
         Track.create
           id: track.id
           artist_name: track.artist_name,
@@ -22,6 +23,7 @@ class SearchTrack extends Spine.Model
           album_title: track.album_title
           { ajax: false }
       error: (data) =>
-        $(".search_items").prepend "<p style='color:red;'>Looks like that track is already in your playlist!</p>"
+        $(".search-alert").empty()
+        $(".search-alert").prepend "<p style='color:red;'>Looks like that track is already in your playlist!</p>"
 
 window.SearchTrack = SearchTrack

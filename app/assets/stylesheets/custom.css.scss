@@ -73,6 +73,25 @@ ul.artist-items {
   }
 }
 
+.search-alert {
+  font-weight: bold;
+  color: green;
+}
+
+.btn-playlist {
+  font-weight: bold;
+  font-size: medium;
+  height: 50px;
+  width: 175px;
+  background-color: $unreal;
+  border-style: none;
+  border-radius: 2px;
+  &:hover {
+    background-color: $orange;
+    cursor: pointer;
+  }
+}
+
 .thumbnail {
   margin: auto;
   margin-bottom: 20px;
