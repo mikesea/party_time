@@ -4,7 +4,7 @@ class Player extends Spine.Controller
   @extend(Spine.Events)
 
   events:
-    # "click .playlist-item"  : "playFromPlaylist"
+    "click .playlist-item"  : "playFromPlaylist"
     # "click #play"           : "playFromPlayer"
     # "click #pause"          : "pauseTrack"
     # "click #next"           : "nextTrack"
@@ -19,6 +19,7 @@ class Player extends Spine.Controller
 
   constructor: ->
     super
+    console.log @playbackToken()
     Track.bind "refresh", @queueFirstTrack
     @loadPlayer()
 
@@ -57,7 +58,7 @@ class Player extends Spine.Controller
     # @api.rdio "GAlNi78J_____zlyYWs5ZG02N2pkaHlhcWsyOWJtYjkyN2xvY2FsaG9zdEbwl7EHvbylWSWFWYMZwfc="
     
     # party.dev
-    @api.rdio "GAlP8gcP_____zczYXZ3Z3BmMmNhazRqemNnbmR2bmZoZnBhcnR5LmRldv0hysAh2gMfJLP3CwlLCz4="
+    @api.rdio @playbackToken()
 
     # For prod
     # @api.rdio "GBdP8ion_____zczYXZ3Z3BmMmNhazRqemNnbmR2bmZoZnBhcnR5dGltZS5oZXJva3VhcHAuY29t6-jOKAYwfsJNHth-UzvDag=="
@@ -80,6 +81,10 @@ class Player extends Spine.Controller
   queueFirstTrack: =>
     Player.bind "ready.player", =>
       @api.rdio().queue(Track.first().id)
+
+  playFromPlaylist: (e) =>
+    console.log "hi"
+    console.log $(e.target)
 
   nextTrack: =>
     currentTrack = $(".playlist-item.playing")
@@ -119,5 +124,8 @@ class Player extends Spine.Controller
 
   currentTrack: =>
     $(".current").attr("data-rdio-id")
+
+  playbackToken: =>
+    $("meta[name=playback_token]").attr('content')
 
 window.Player = Player
