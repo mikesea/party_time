@@ -1,5 +1,10 @@
-<li class="playlist-item well" data-rdio-id="{{id}}">
-  <p>{{artist_name}} - {{album_title}}</p>
-  <p>{{title}}</p>
-  <button id="add_to_playlist">+</button>
+<li class="search-item well fluid" data-rdio-id="{{id}}">
+  <div class="search-art">
+    <img class="thumbnail search-image" src="{{album_art}}" />
+  </div>
+  <div class="track-info">
+    <p><strong>Track:</strong> {{title}}</p>
+    <p><strong>Album:</strong> {{album_title}}</p>
+    <p><strong>Artist:</strong> {{artist_name}}</p>
+  </div>
 </li>

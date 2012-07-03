@@ -5,7 +5,6 @@ class Playlist extends Spine.Controller
     ".playlist-items" : "tracks"
 
   events:
-    # "click button#remove_track" : "removeTrack"
     "click .playlist-item p" : "playTrack"
 
   constructor: ->

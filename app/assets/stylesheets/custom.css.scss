@@ -5,6 +5,7 @@ $blue: #69D2E7;
 $beach: #E0E4CC;
 $pond: #A7DBD8;
 $unreal: #FA6900;
+$pinky: #E2CED2;
 
 body {
   background-color: $pond;
@@ -14,6 +15,7 @@ header a {
   text-decoration: none; color: #000;
   &:hover {
     text-decoration: none;
+    color: $orange;
   }
 }
 
@@ -51,6 +53,15 @@ ul.artist-items {
   }
 }
 
+.search-item {
+  margin-left: -25px;
+  p { display:block; }
+  &:hover {
+    background-color: $orange;
+    cursor: pointer;
+  }
+}
+
 .btn-music {
   height: 35px;
   width: 35px;
@@ -70,6 +81,19 @@ ul.artist-items {
 
 #music-controls {
   margin-top: 15px;
+}
+
+.search.well {
+  background-color: $pinky;
+}
+
+.search-image {
+  height: 100px;
+  width: 100px;
+  float: left;
+  margin-left: -10px;
+  margin-right: 10px;
+  margin-top: -14px;
 }
 
 .well {
