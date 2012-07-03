@@ -14,5 +14,5 @@
 /log/*.log
 /tmp
 
-# /config/initializers/echonest.rb
-# /config/initializers/rdio.rb
+/config/initializers/echonest.rb
+/config/initializers/rdio.rb
