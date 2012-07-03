@@ -34,14 +34,13 @@ ul.artist-items {
   border-radius: 5px;
 }
 
-.playlist-item {
-  padding-left: 10px;
-  padding-bottom: 1px;
-  padding-top: 7px;
+.playlist-item { margin: 3px 0;
+  p { display:block; padding: 5px 5px; }
   &:hover {
     font-weight: bold;
     background-color: $orange;
     border-radius: 5px;
+    cursor: pointer;
   }
 }
 

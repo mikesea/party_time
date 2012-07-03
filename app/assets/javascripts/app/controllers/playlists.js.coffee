@@ -5,13 +5,18 @@ class Playlist extends Spine.Controller
     ".playlist-items" : "tracks"
 
   events:
-    "click button#remove_track" : "removeTrack"
+    # "click button#remove_track" : "removeTrack"
+    "click .playlist-item p" : "playTrack"
 
   constructor: ->
     super
     Track.bind 'refresh', @addAll
     Track.bind 'create', @addOne
     Track.fetch()
+
+  playTrack: (e) =>
+    track_id = $(e.target).parent().attr("id")
+    Player.play(track_id) if track_id
 
   addAll: =>
     for track in Track.all()

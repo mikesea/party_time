@@ -19,9 +19,12 @@ class Player extends Spine.Controller
 
   constructor: ->
     super
-    console.log @playbackToken()
     Track.bind "refresh", @queueFirstTrack
     @loadPlayer()
+
+  @play: (track_id) =>
+    $("#api").rdio().clearQueue()
+    $("#api").rdio().play(track_id)
 
   logIn: =>
     $(".alert").show()
