@@ -22,9 +22,13 @@ class Player extends Spine.Controller
     Track.bind "refresh", @queueFirstTrack
     @loadPlayer()
 
+  logIn: =>
+    $(".alert").show()
+
   loadPlayer: =>
     @api.bind "ready.rdio", (e, userInfo) =>
-      console.log userInfo
+      unless userInfo
+        @logIn()
       Player.trigger "ready.player"
 
     @api.bind "playingTrackChanged.rdio", (e, playingTrack, sourcePosition) =>
@@ -49,8 +53,13 @@ class Player extends Spine.Controller
         $("#play").hide()
         $("#pause").show()
 
+    # localhost
     # @api.rdio "GAlNi78J_____zlyYWs5ZG02N2pkaHlhcWsyOWJtYjkyN2xvY2FsaG9zdEbwl7EHvbylWSWFWYMZwfc="
+    
+    # party.dev
     @api.rdio "GAlP8gcP_____zczYXZ3Z3BmMmNhazRqemNnbmR2bmZoZnBhcnR5LmRldv0hysAh2gMfJLP3CwlLCz4="
+
+    # For prod
     # @api.rdio "GBdP8ion_____zczYXZ3Z3BmMmNhazRqemNnbmR2bmZoZnBhcnR5dGltZS5oZXJva3VhcHAuY29t6-jOKAYwfsJNHth-UzvDag=="
 
     $("#play").click ->

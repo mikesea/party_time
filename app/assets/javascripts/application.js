@@ -14,5 +14,6 @@
 //= require jquery_ujs
 //= require handlebars
 //= require bootstrap-modal
+//= require bootstrap-alert
 //= require app
 //= require_tree .
