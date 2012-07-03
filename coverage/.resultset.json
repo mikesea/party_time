@@ -25,7 +25,7 @@
         1,
         null,
         1,
-        0,
+        2,
         null,
         null
       ],
@@ -51,7 +51,7 @@
         null,
         null,
         1,
-        5,
+        4,
         1,
         null,
         null,
@@ -63,19 +63,11 @@
         null,
         0,
         null,
-        null,
-        null,
-        1,
-        0,
-        0,
-        null,
-        0,
         null,
         null,
         null
       ],
       "/Users/michaelchlipala/hungry_academy/projects/party_time/app/models/playlist.rb": [
-        1,
         1,
         1,
         1,
@@ -88,9 +80,9 @@
         null,
         null,
         1,
+        10,
         9,
-        8,
-        8,
+        9,
         null,
         null,
         null,
@@ -108,7 +100,7 @@
         null,
         null,
         1,
-        15,
+        16,
         null,
         null
       ],
@@ -116,7 +108,7 @@
         1,
         null,
         1,
-        0,
+        2,
         null,
         null,
         null
@@ -142,6 +134,7 @@
         null,
         null,
         null,
+        null,
         0,
         null,
         null,
@@ -155,12 +148,12 @@
         1,
         null,
         1,
-        0,
+        1,
         null,
         null,
         1,
-        0,
-        0,
+        1,
+        1,
         null,
         0,
         null,
@@ -173,15 +166,6 @@
       ],
       "/Users/michaelchlipala/hungry_academy/projects/party_time/app/models/track.rb": [
         1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null
-      ],
-      "/Users/michaelchlipala/hungry_academy/projects/party_time/app/models/event.rb": [
         1,
         1,
         1,
@@ -259,6 +243,6 @@
         null
       ]
     },
-    "timestamp": 1341287144
+    "timestamp": 1341296999
   }
 }

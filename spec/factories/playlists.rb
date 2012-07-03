@@ -7,8 +7,6 @@ FactoryGirl.define do
         track = FactoryGirl.build(:track)
         playlist.tracks << track
       end
-      event = FactoryGirl.build(:event)
-      playlist.event.build(event.attributes)
       playlist.save
     end
   end
@@ -19,8 +17,6 @@ FactoryGirl.define do
         track = FactoryGirl.build(:track)
         playlist.tracks << track
       end
-      event = FactoryGirl.build(:event)
-      playlist.event.build(event.attributes)
       playlist.save
     end
   end
