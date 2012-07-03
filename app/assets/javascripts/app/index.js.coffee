@@ -50,7 +50,8 @@ class Recommender extends Spine.Controller
         $(".modal-footer").empty()
         $(".modal-footer").append "<a href='/playlists/#{data.playlist.key}' class='btn btn-success btn-large'>It's ready! Check out your playlist!</a>"
       error: (data) =>
-        console.log data
+        $(".modal-footer").empty()
+        $(".modal-footer").append "<p style='color:red;'>Uh oh, something went wrong. <strong><a href='/'>Try again?</a></strong></p>"
 
     @loading()
 

@@ -1,5 +1,5 @@
 class SearchTrack extends Spine.Model
-  @configure 'SearchTrack', 'artist_name', 'title', 'rdio_id', 'album_title'
+  @configure 'SearchTrack', 'artist_name', 'title', 'rdio_id', 'album_title', 'album_art'
 
   addToPlaylist: ->
     $.ajax
@@ -14,6 +14,8 @@ class SearchTrack extends Spine.Model
       }
       type: "post"
       success: (track) =>
+        $(".search-alert").empty()
+        $(".search-alert").append "<p>Success! Added to your playlist</p>"
         Track.create
           id: track.id
           artist_name: track.artist_name,
@@ -21,6 +23,7 @@ class SearchTrack extends Spine.Model
           album_title: track.album_title
           { ajax: false }
       error: (data) =>
-        console.log data
+        $(".search-alert").empty()
+        $(".search-alert").prepend "<p style='color:red;'>Looks like that track is already in your playlist!</p>"
 
 window.SearchTrack = SearchTrack

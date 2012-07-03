@@ -1,18 +1,18 @@
 class Playlist
   include Ripple::Document
-  one :event
   many :tracks 
 
   def self.build_from_artists(artists)
     playlist = Playlist.new
-    playlist.tracks += Recommender.recommend_tracks_from_artists(artists)
+    tracks = Recommender.recommend_tracks_from_artists(artists)
+    tracks.each { |track| playlist.tracks << track }
     playlist
   end
 
   def add_track(track)
     unless find_track_by_rdio(track.rdio_id)
       tracks << track
-      save
+      save!
     end
   end
 

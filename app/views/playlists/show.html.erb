@@ -1,41 +1,49 @@
 <%= content_for(:head) do %>
   <%= playlist_id_tag %>
+  <%= playback_token_tag %>
 <% end %>
 
 <div class="container" style="margin-top: 20px;">
-  <h1>Playlist</h1>
-  <div class="row span4">
+  <div class="row">
+    <div class="alert hide span6 offset3">
+      <button class="close" data-dismiss="alert">×</button>
+      <div class="center">
+        <h4>To hear full tracks, sign-in at <a href="https://www.rdio.com/signin/" target="_blank">rdio.com/signin/</a>.</h4>
+        <p>Not an Rdio subscriber? <strong><a href="https://www.rdio.com/signup/" target="_blank">Sign up for an account! </a></strong>It's free!</p>
+      </div>
+    </div>
+  </div>
+  <header>
+    <a href="/"><h1 class="center" id="logo">Party Time!</h1></a>
+  </header>
+  <div class="row span5">
     <div class="player well">
       <div id="api"></div>
       <div class="album_art">
-        <img class="thumbnail" id="art" src="" height="200" width="200" style="margin-left:25px;
-        margin-bottom:20px;">
+        <img class="thumbnail" id="art" src="" height="250" width="250">
       </div>
       <div><b>Track: </b><span id="track"></span></div>
       <div><b>Album: </b><span id="album"></span></div>
       <div><b>Artist: </b><span id="artist"></span></div>
-      <div><b>Position: </b>
-        <span style="display:inline-block;width:200px;border:1px solid black;">
-          <span id="position" style="display:inline-block;background-color:#666">&nbsp;</span>
-        </span></div>
-      <div>
-        <button class="btn" id="previous">&lt;&lt;</button>
-        <button class="btn" id="play">|&gt;</button>
-        <button class="btn" id="pause">||</button>
-        <button class="btn" id="next">&gt;&gt;</button>
+      <div id="music-controls" class="center">
+        <button class="btn-music" id="previous"><img src="/assets/previous.png" /></button>
+        <button class="btn-music" id="play"><img src="/assets/play.png" /></button>
+        <button class="btn-music" id="pause"><img src="/assets/pause.png" /></button>
+        <button class="btn-music" id="next"><img src="/assets/next.png" /></button>
       </div>
     </div>
-    <div class="search">
-      <form id='search_form'>
+    <div class="search well">
+      <h3 class="center">Add some more tracks!</h3>
+      <form id='search_form' class="center">
         <input type='text' id="query" placeholder='Bon Iver - Skinny Love' />
-        <input class="btn btn-primary" type='submit' value='Search' />
+        <input class="btn btn-info" type='submit' value='Search' />
       </form>
+      <div class="search-alert center"></div>
       <ul class="search_items">
       </ul>
     </div>
   </div>
   <div class="playlist well span6">
-    <h2>Tracks</h2>
     <ol class="playlist-items">
     </ol>
   </div>

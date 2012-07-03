@@ -34,7 +34,7 @@ class LivingSocialDeal
   )
 
   def self.get_national_deal
-    LivingSocialDeal.where(national: "true", sold_out: "false", country_code: "US").first
+    LivingSocialDeal.where(national: "true", sold_out: "false", country_code: "US").last
   end
 
 end

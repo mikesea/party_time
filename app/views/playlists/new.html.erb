@@ -1,16 +1,18 @@
-<div class="container center" style="margin-top: 20px;">
+<div class="container center main">
   <div class="well span5 offset3 generator">
     <header class="welcome">
-      <h1>Party Time!</h1>
-      <h3>Social playlists.</h3>
-
-      <ul><h4>Getting started is simple:</h3>
-        <li>1. Pick up to five artists to set the mood for your party.</li>
-        <li>2. We'll craft a playlist of 15 songs to get things starated.</li>
-        <li>3. Invite your friends to collaborate on the playlist.</li>
-      </ul>
+      <a href="#"><h1 class="center" id="logo">Party Time!</h1></a>
+      <div class="welcome-copy">
+        <h3>Instant playlists.</h3>
+        <br>
+        <ul class="instructions"><h4>Getting started is simple:</h3>
+          <li>1. Pick up to five artists to set the mood.</li>
+          <li>2. We'll craft a playlist of 15 songs to start.</li>
+          <li>3. Share with friends!</li>
+        </ul>
+      </div>
     </header>
-    <h2>Choose a few artists</h2>
+    <h3>Who do you want to listen to?</h3>
   	<div class="recommender">
       <div class="artists">
         <ul class="artist-items">
@@ -31,14 +33,14 @@
           </li>
         </ul>
       </div>
-      <button class="btn btn-primary" id="recommend">Create My Playlist!</button>
+      <button class="btn-playlist" id="recommend">Create My Playlist!</button>
   	</div>
   </div>
   <div class="modal fade" id="loading">
     <div class="modal-header">
       <button type="button" class="close" data-dismiss="modal">×</button>
       <h3 class="center">Generating your playlist!</h3>
-      <h5 class="center">In the meantime...</h5>
+      <h5 class="center">In the meantime, here's a word from our sponsor:</h5>
     </div>
     <div class="modal-body" id="deal">
       <p></p>

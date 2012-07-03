@@ -17,6 +17,7 @@ class Search
           artist_name: track[:artist],
           album_title: track[:album],
           title: track[:name],
+          album_art: track[:icon],
           rdio_id: track[:key])
         tracks << t
       end

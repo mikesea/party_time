@@ -1,4 +1,33 @@
 @import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Codystar);
+$orange: #F38630;
+$blue: #69D2E7;
+$beach: #E0E4CC;
+$pond: #A7DBD8;
+$unreal: #FA6900;
+$pinky: #E2CED2;
+
+body {
+  background-color: $pond;
+}
+
+header a { 
+  text-decoration: none; color: #000;
+  &:hover {
+    text-decoration: none;
+    color: $orange;
+  }
+}
+
+.instructions {
+  margin: auto;
+}
+
+h1#logo {
+  font-family: 'Codystar', cursive;
+  font-size: 50px;
+  padding: 15px;
+}
 
 .center {
   text-align: center;
@@ -6,4 +35,95 @@
 
 ul {
   list-style: none;
+}
+
+ul.artist-items {
+  margin: auto;
+}
+
+.playing {
+  font-weight: bold;
+  background-color: $blue;
+  border-radius: 5px;
+}
+
+.playlist-item { margin: 3px 0;
+  p { display:block; padding: 5px 5px; }
+  &:hover {
+    font-weight: bold;
+    background-color: $orange;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+
+.main {
+  margin-top: 50px;
+}
+
+.search-item {
+  margin-left: -25px;
+  p { display:block; }
+  &:hover {
+    background-color: $orange;
+    cursor: pointer;
+  }
+}
+
+.btn-music {
+  height: 35px;
+  width: 35px;
+  border-style: none;
+  border-radius: 2px;
+  background-color: $pond;
+  &:hover {
+    background-color: $unreal;
+  }
+}
+
+.search-alert {
+  font-weight: bold;
+  color: green;
+}
+
+.btn-playlist {
+  font-weight: bold;
+  font-size: medium;
+  margin-top: 7px;
+  height: 40px;
+  width: 175px;
+  background-color: $unreal;
+  border-style: none;
+  border-radius: 2px;
+  &:hover {
+    background-color: $orange;
+    cursor: pointer;
+  }
+}
+
+.thumbnail {
+  margin: auto;
+  margin-bottom: 20px;
+  background-color: black;
+}
+
+#music-controls {
+  margin-top: 15px;
+}
+
+.search.well {
+  background-color: $pinky;
+}
+
+.search-image {
+  height: 100px;
+  width: 100px;
+  float: left;
+  margin-left: -10px;
+  margin-right: 10px;
+  margin-top: -14px;
+}
+
+.well {
+  background-color: $beach;
 }

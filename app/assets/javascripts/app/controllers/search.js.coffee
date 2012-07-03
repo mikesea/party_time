@@ -3,7 +3,7 @@ class Search extends Spine.Controller
 
   events:
     "submit #search_form" : "search"
-    "click #add_to_playlist" : "addToPlaylist"
+    "click .search-item" : "addToPlaylist"
 
   elements:
     "#query" : "query"
@@ -24,22 +24,26 @@ class Search extends Spine.Controller
       type: "post"
       success: (tracks) =>
         @results.empty()
+        if tracks.length == 0
+          console.log "no results!"
         for track in tracks
           SearchTrack.create
             id: track.id
             artist_name: track.artist_name,
             title: track.title,
             album_title: track.album_title,
+            album_art: track.album_art,
             { ajax: false }
       error: (data) =>
-        console.log data
+        @results.empty()
+        @results.append "<li><p style='color:red;'>Hmm, something went wrong searching for tracks</p></li>"
 
   trackExists: (track) =>
     if Track.find(track.id)
       return true
 
   addToPlaylist: (e) ->
-    id = $(e.target).parent().attr("data-rdio-id")
+    id = $(e.currentTarget).attr("data-rdio-id")
     track = SearchTrack.find(id)
     track.addToPlaylist()
 

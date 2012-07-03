@@ -18,12 +18,5 @@ class PlaylistsController < ApplicationController
       head status: :bad_request
     end
   end
-
-  def destroy
-    if @playlist
-      @playlist.remove_track
-    else
-      head status: :bad_request
-    end
-  end
+  
 end

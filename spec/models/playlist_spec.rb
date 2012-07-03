@@ -8,6 +8,23 @@ describe "Playlist" do
     let(:track_2) { FactoryGirl.build(:track) }
     let(:playlist) { FactoryGirl.create(:playlist) }
 
+    context "generating a playlist with tracks" do
+      
+      let(:artists) { ["Weezer", "The Black Keys", "Taylor Swift"] }
+      let(:tracks) { FactoryGirl.build_list(:track, 15) }
+
+      context "with valid params" do
+        before(:each) do
+          Recommender.stub(:recommend_tracks_from_artists).and_return(tracks)
+        end
+
+        it "creates a new playlist with tracks" do
+          playlist = Playlist.build_from_artists(artists)
+          playlist.tracks.count.should == 15
+        end
+      end
+    end
+
     context "finding tracks" do
       before(:each) do
         playlist.add_track(track_1)

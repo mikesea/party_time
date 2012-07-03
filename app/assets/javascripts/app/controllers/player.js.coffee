@@ -4,7 +4,7 @@ class Player extends Spine.Controller
   @extend(Spine.Events)
 
   events:
-    # "click .playlist-item"  : "playFromPlaylist"
+    "click .playlist-item"  : "playFromPlaylist"
     # "click #play"           : "playFromPlayer"
     # "click #pause"          : "pauseTrack"
     # "click #next"           : "nextTrack"
@@ -22,9 +22,17 @@ class Player extends Spine.Controller
     Track.bind "refresh", @queueFirstTrack
     @loadPlayer()
 
+  @play: (track_id) =>
+    $("#api").rdio().clearQueue()
+    $("#api").rdio().play(track_id)
+
+  logIn: =>
+    $(".alert").show()
+
   loadPlayer: =>
     @api.bind "ready.rdio", (e, userInfo) =>
-      console.log userInfo
+      unless userInfo
+        @logIn()
       Player.trigger "ready.player"
 
     @api.bind "playingTrackChanged.rdio", (e, playingTrack, sourcePosition) =>
@@ -49,9 +57,14 @@ class Player extends Spine.Controller
         $("#play").hide()
         $("#pause").show()
 
+    # localhost
     # @api.rdio "GAlNi78J_____zlyYWs5ZG02N2pkaHlhcWsyOWJtYjkyN2xvY2FsaG9zdEbwl7EHvbylWSWFWYMZwfc="
-    # @api.rdio "GAlP8gcP_____zczYXZ3Z3BmMmNhazRqemNnbmR2bmZoZnBhcnR5LmRldv0hysAh2gMfJLP3CwlLCz4="
-    @api.rdio "GBdP8ion_____zczYXZ3Z3BmMmNhazRqemNnbmR2bmZoZnBhcnR5dGltZS5oZXJva3VhcHAuY29t6-jOKAYwfsJNHth-UzvDag=="
+    
+    # party.dev
+    @api.rdio @playbackToken()
+
+    # For prod
+    # @api.rdio "GBdP8ion_____zczYXZ3Z3BmMmNhazRqemNnbmR2bmZoZnBhcnR5dGltZS5oZXJva3VhcHAuY29t6-jOKAYwfsJNHth-UzvDag=="
 
     $("#play").click ->
       $("#api").rdio().play()
@@ -72,6 +85,10 @@ class Player extends Spine.Controller
     Player.bind "ready.player", =>
       @api.rdio().queue(Track.first().id)
 
+  playFromPlaylist: (e) =>
+    console.log "hi"
+    console.log $(e.target)
+
   nextTrack: =>
     currentTrack = $(".playlist-item.playing")
     nextTrack = $(".playlist-item.playing").next()
@@ -86,6 +103,7 @@ class Player extends Spine.Controller
     currentTrack = $(".playlist-item.playing")
     prevTrack = $(".playlist-item.playing").prev()
     if prevTrack.length > 0
+      @api.rdio().clearQueue()
       @api.rdio().play(prevTrack.attr("data-rdio-id"))
       currentTrack.removeClass("playing")
       prevTrack.addClass("playing")
@@ -110,5 +128,8 @@ class Player extends Spine.Controller
 
   currentTrack: =>
     $(".current").attr("data-rdio-id")
+
+  playbackToken: =>
+    $("meta[name=playback_token]").attr('content')
 
 window.Player = Player
