@@ -1,3 +1,10 @@
 Social playlists for your next gathering.
 
 Powered by: EchoNest, Rdio, and Riak.
+
+To run the tests, clone the repo and run:
+
+```
+brew install riak
+rake spec
+```
