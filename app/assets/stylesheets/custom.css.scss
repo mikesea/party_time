@@ -10,6 +10,13 @@ body {
   background-color: $pond;
 }
 
+header a { 
+  text-decoration: none; color: #000;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 h1#logo {
   font-family: 'Codystar', cursive;
   font-size: 50px;

@@ -10,6 +10,10 @@
         1,
         0,
         null,
+        null,
+        1,
+        0,
+        null,
         null
       ],
       "/Users/michaelchlipala/hungry_academy/projects/party_time/app/controllers/application_controller.rb": [
@@ -77,9 +81,10 @@
         1,
         null,
         1,
-        2,
-        2,
-        2,
+        3,
+        3,
+        48,
+        3,
         null,
         null,
         1,
@@ -254,6 +259,6 @@
         null
       ]
     },
-    "timestamp": 1341272269
+    "timestamp": 1341287144
   }
 }
