@@ -6,27 +6,27 @@ To run the tests:
 
 1. Install Riak (if you haven't already):
 ```
-brew install riak
+$ brew install riak
 ```
 
 2. Install Mongo (if you haven't already):
 ```
-brew install mongodb
+$ brew install mongodb
 ```
 
 3. Start Mongo
 ```
-mongod
+$ mongod
 ```
 
 4. Run the specs
 ```
-rake spec
+$ rake spec
 ```
 
 (Optional: to start Riak)
 ```
-riak start
-riak ping
+$ riak start
+$ riak ping
 => pong
 ```
