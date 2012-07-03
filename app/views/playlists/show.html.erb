@@ -13,14 +13,13 @@
     </div>
   </div>
   <header>
-    <h1 class="center">Playlist</h1>
+    <h1 class="center" id="logo">Party Time!</h1>
   </header>
   <div class="row span5">
     <div class="player well">
       <div id="api"></div>
       <div class="album_art">
-        <img class="thumbnail" id="art" src="" height="250" width="250" style="margin-left:25px;
-        margin-bottom:20px;">
+        <img class="thumbnail" id="art" src="" height="250" width="250">
       </div>
       <div><b>Track: </b><span id="track"></span></div>
       <div><b>Album: </b><span id="album"></span></div>
@@ -29,11 +28,11 @@
         <span style="display:inline-block;width:200px;border:1px solid black;">
           <span id="position" style="display:inline-block;background-color:#666">&nbsp;</span>
         </span></div>
-      <div>
-        <button class="btn" id="previous">&lt;&lt;</button>
-        <button class="btn" id="play">|&gt;</button>
-        <button class="btn" id="pause">||</button>
-        <button class="btn" id="next">&gt;&gt;</button>
+      <div id="music-controls" class="center">
+        <button class="btn-music" id="previous"><img src="/assets/previous.png" /></button>
+        <button class="btn-music" id="play"><img src="/assets/play.png" /></button>
+        <button class="btn-music" id="pause"><img src="/assets/pause.png" /></button>
+        <button class="btn-music" id="next"><img src="/assets/next.png" /></button>
       </div>
     </div>
     <div class="search">
@@ -46,7 +45,6 @@
     </div>
   </div>
   <div class="playlist well span6">
-    <h2>Tracks</h2>
     <ol class="playlist-items">
     </ol>
   </div>
