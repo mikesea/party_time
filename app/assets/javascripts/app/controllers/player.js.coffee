@@ -103,6 +103,7 @@ class Player extends Spine.Controller
     currentTrack = $(".playlist-item.playing")
     prevTrack = $(".playlist-item.playing").prev()
     if prevTrack.length > 0
+      @api.rdio().clearQueue()
       @api.rdio().play(prevTrack.attr("data-rdio-id"))
       currentTrack.removeClass("playing")
       prevTrack.addClass("playing")
