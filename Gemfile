@@ -13,6 +13,7 @@ gem 'bson_ext'
 gem 'chronic'
 gem 'bootstrap-sass', '~> 2.0.4.0'
 gem 'rdio_api', git: 'https://github.com/anilv/rdio_api.git'
+gem 'newrelic_rpm'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

@@ -127,6 +127,7 @@ GEM
     multipart-post (1.1.5)
     nestling (0.1.2)
       multi_json (~> 1.0.3)
+    newrelic_rpm (3.3.4)
     nokogiri (1.5.5)
     polyglot (0.3.3)
     rack (1.4.1)
@@ -226,6 +227,7 @@ DEPENDENCIES
   konacha
   mongoid
   nestling
+  newrelic_rpm
   rack-test
   rails (= 3.2.3)
   rdio_api!
