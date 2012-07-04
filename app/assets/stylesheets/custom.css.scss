@@ -19,6 +19,10 @@ header a {
   }
 }
 
+.playlist-main {
+  margin-top: 20px;
+}
+
 .instructions {
   margin: auto;
 }
@@ -58,7 +62,15 @@ ul.artist-items {
 }
 
 .main {
-  margin-top: 50px;
+  margin-top: 100px;
+}
+
+#built-by {
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+    color: $unreal;
+  }
 }
 
 .search-item {
@@ -131,6 +143,32 @@ ul.artist-items {
 .tweet {
   float: right;
   padding-left: 5px;
+}
+
+.share-text {
+  float: right;
+  padding-top: 5px;
+  color: black;
+}
+
+#border-top {
+  top: 0;
+  height: 5px;
+  width: 100%;
+  background: $unreal;
+  position: fixed;
+}
+
+#border-bottom {
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  background: $blue;
+  position: fixed;
+}
+
+.footer.row h6 {
+  float: right;
 }
 
 .well {

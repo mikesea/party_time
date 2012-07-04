@@ -10,8 +10,15 @@
   <%= yield :head %>
 </head>
 <body>
-
-<%= yield %>
-
+<div id="border-top"></div>
+<div class="container">
+  <%= yield %>
+  <div class="footer center">
+    <div class="row">
+      <h6>Built by <a href="http://github.com/mikesea" target="_blank" id="built-by">Mike.</a></h6>
+    </div>
+  </div>
+</div>
+<div id="border-bottom"></div>
 </body>
 </html>
