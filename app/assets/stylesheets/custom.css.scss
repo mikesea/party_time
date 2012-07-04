@@ -23,6 +23,10 @@ header a {
   margin-top: 20px;
 }
 
+.footer {
+  margin-top: 20px;
+}
+
 .instructions {
   margin: auto;
 }
@@ -93,6 +97,10 @@ ul.artist-items {
   }
 }
 
+.artists {
+  margin-top: 3px;
+}
+
 .search-alert {
   font-weight: bold;
   color: green;
@@ -101,7 +109,6 @@ ul.artist-items {
 .btn-playlist {
   font-weight: bold;
   font-size: medium;
-  margin-top: 7px;
   height: 40px;
   width: 175px;
   background-color: $unreal;
@@ -125,6 +132,11 @@ ul.artist-items {
 
 .search.well {
   background-color: $pinky;
+}
+
+.welcome-copy {
+  padding: 7px;
+  margin-bottom: 15px;
 }
 
 .search-image {
@@ -161,14 +173,11 @@ ul.artist-items {
 
 #border-bottom {
   bottom: 0;
-  height: 50px;
+  height: 30px;
   width: 100%;
   background: $blue;
   position: fixed;
-}
-
-.footer.row h6 {
-  float: right;
+  box-shadow: 0 0 1px 1px #888;
 }
 
 .well {

@@ -14,7 +14,7 @@
     </div>
   </div>
   <header>
-    <a href="/"><h1 class="center" id="logo">Party Time!</h1></a>
+    <a href="#"><h1 class="center" id="logo">Party Time!</h1></a>
   </header>
   <div class="row span5">
     <div class="player well">
@@ -22,9 +22,11 @@
       <div class="album_art">
         <img class="thumbnail" id="art" src="" height="250" width="250">
       </div>
-      <div><b>Track: </b><span id="track"></span></div>
-      <div><b>Album: </b><span id="album"></span></div>
-      <div><b>Artist: </b><span id="artist"></span></div>
+      <div id="track-info">
+        <div><b>Track: </b><span id="track"></span></div>
+        <div><b>Album: </b><span id="album"></span></div>
+        <div><b>Artist: </b><span id="artist"></span></div>
+      </div>
       <div id="music-controls" class="center">
         <button class="btn-music" id="previous"><img src="/assets/previous.png" /></button>
         <button class="btn-music" id="play"><img src="/assets/play.png" /></button>
