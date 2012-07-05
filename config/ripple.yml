@@ -21,4 +21,4 @@ test:
 production:
   http_port: 8098
   pb_port: 8087
-  host: 50.116.62.253
+  host: 127.0.0.1
