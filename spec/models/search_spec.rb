@@ -19,6 +19,7 @@ describe "Search" do
 
     before(:each) do
       RdioApi::Client.any_instance.stub(:search).and_return(rdio_response)
+      RDIO = RdioApi.new(consumer_key: "123", consumer_secret: "123")
     end
 
     it "returns a collection of tracks with populated values" do
