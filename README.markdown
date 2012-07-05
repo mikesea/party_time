@@ -14,19 +14,14 @@ $ brew install riak
 $ brew install mongodb
 ```
 
-3. Start Mongo
+3. Start Riak
 ```
-$ mongod
+$ riak start
+$ riak ping
+=> pong
 ```
 
 4. Run the specs
 ```
 $ rake spec
-```
-
-(Optional: to start Riak)
-```
-$ riak start
-$ riak ping
-=> pong
 ```
