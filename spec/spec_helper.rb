@@ -16,7 +16,6 @@ Dir[Rails.root.join("spec/factories/*.rb")].each {|f| require f}
 
 require 'ripple/test_server'
 
-
 RSpec.configure do |config|
 
   config.before(:suite) { Ripple::TestServer.setup }

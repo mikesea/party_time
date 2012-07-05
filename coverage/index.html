@@ -23,18 +23,18 @@
       <img src="./assets/0.5.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2012-07-03T13:00:49-04:00">2012-07-03T13:00:49-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2012-07-05T10:06:06-04:00">2012-07-05T10:06:06-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">88.71%</span></span>
+    (<span class="covered_percent"><span class="yellow">84.68%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.35
+         1.31
        </span>
     </span> hits/line)
   </h2>
@@ -42,8 +42,8 @@
   <div>
     <b>13</b> files in total.
     <b>124</b> relevant lines. 
-    <span class="green"><b>110</b> lines covered</span> and
-    <span class="red"><b>14</b> lines missed </span>
+    <span class="green"><b>105</b> lines covered</span> and
+    <span class="red"><b>19</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -171,12 +171,12 @@
       
       <tr>
         <td class="strong"><a href="#e9c3c16b769bfde224bfd14c5fa0cd81b9c81303" class="src_link" title="app/models/search.rb">app/models/search.rb</a></td>
-        <td class="yellow strong">81.82 %</td>
+        <td class="red strong">36.36 %</td>
         <td>28</td>
         <td>11</td>
-        <td>9</td>
-        <td>2</td>
-        <td>0.9</td>
+        <td>4</td>
+        <td>7</td>
+        <td>0.4</td>
       </tr>
       
       <tr>
@@ -295,11 +295,11 @@
           <div class="file_list_container" id="Models">
   <h2>
     <span class="group_name">Models</span>
-    (<span class="covered_percent"><span class="green">90.36%</span></span>
+    (<span class="covered_percent"><span class="yellow">84.34%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.78
+         1.68
        </span>
     </span> hits/line)
   </h2>
@@ -307,8 +307,8 @@
   <div>
     <b>5</b> files in total.
     <b>83</b> relevant lines. 
-    <span class="green"><b>75</b> lines covered</span> and
-    <span class="red"><b>8</b> lines missed </span>
+    <span class="green"><b>70</b> lines covered</span> and
+    <span class="red"><b>13</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -356,12 +356,12 @@
       
       <tr>
         <td class="strong"><a href="#e9c3c16b769bfde224bfd14c5fa0cd81b9c81303" class="src_link" title="app/models/search.rb">app/models/search.rb</a></td>
-        <td class="yellow strong">81.82 %</td>
+        <td class="red strong">36.36 %</td>
         <td>28</td>
         <td>11</td>
-        <td>9</td>
-        <td>2</td>
-        <td>0.9</td>
+        <td>4</td>
+        <td>7</td>
+        <td>0.4</td>
       </tr>
       
       <tr>
@@ -1162,7 +1162,7 @@
         <li class="missed" data-hits="0" data-linenumber="7">
           
           
-          <code class="ruby">    tag('meta', name: 'playback_token', content: RDIO.getPlaybackToken(domain: &quot;localhost&quot;))</code>
+          <code class="ruby">    tag('meta', name: 'playback_token', content: RDIO.getPlaybackToken(domain: request.host))</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="8">
@@ -1826,11 +1826,11 @@
         <div class="source_table" id="e9c3c16b769bfde224bfd14c5fa0cd81b9c81303">
   <div class="header">
     <h3>app/models/search.rb</h3>
-    <h4><span class="yellow">81.82 %</span> covered</h4>
+    <h4><span class="red">36.36 %</span> covered</h4>
     <div>
       <b>11</b> relevant lines. 
-      <span class="green"><b>9</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <span class="green"><b>4</b> lines covered</span> and
+      <span class="red"><b>7</b> lines missed.</span>
     </div>
   </div>
   
@@ -1885,8 +1885,8 @@
           <code class="ruby">      ).results</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="9">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="9">
+          
           
           <code class="ruby">    parse_rdio_response(response)</code>
         </li>
@@ -1909,20 +1909,20 @@
           <code class="ruby">  def self.parse_rdio_response(response)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="13">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="13">
+          
           
           <code class="ruby">    tracks = []</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="14">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="14">
+          
           
           <code class="ruby">    response.each do |track|</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="15">
-          <span class="hits">2</span>
+        <li class="missed" data-hits="0" data-linenumber="15">
+          
           
           <code class="ruby">      if track.canStream</code>
         </li>
@@ -1981,8 +1981,8 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="25">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="25">
+          
           
           <code class="ruby">    tracks</code>
         </li>
