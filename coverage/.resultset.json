@@ -1,6 +1,19 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/michaelchlipala/hungry_academy/projects/party_time/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null
+      ],
       "/Users/michaelchlipala/hungry_academy/projects/party_time/app/helpers/application_helper.rb": [
         1,
         null
@@ -16,24 +29,11 @@
         null,
         null
       ],
-      "/Users/michaelchlipala/hungry_academy/projects/party_time/app/controllers/application_controller.rb": [
-        1,
-        1,
-        null,
-        1,
-        null,
-        1,
-        null,
-        1,
-        2,
-        null,
-        null
-      ],
       "/Users/michaelchlipala/hungry_academy/projects/party_time/app/controllers/deals_controller.rb": [
         1,
         null,
         1,
-        2,
+        0,
         null,
         null,
         null
@@ -175,48 +175,6 @@
         1,
         null
       ],
-      "/Users/michaelchlipala/hungry_academy/projects/party_time/app/models/living_social_deal.rb": [
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null
-      ],
       "/Users/michaelchlipala/hungry_academy/projects/party_time/app/models/recommender.rb": [
         1,
         null,
@@ -243,6 +201,6 @@
         null
       ]
     },
-    "timestamp": 1341589242
+    "timestamp": 1341681443
   }
 }
