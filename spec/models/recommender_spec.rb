@@ -12,7 +12,8 @@ describe "Recommender" do
     :artist_id=>"AR633SY1187B9AC3B9", 
     :id=>"SOWQDGD12A58291894", 
     :artist_name=>"Weezer", 
-    :title=>"The Girl Got Hot"}] }
+    :title=>"The Girl Got Hot"}]
+  }
 
   context "recommending a tracklist from artists" do
     

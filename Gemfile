@@ -4,7 +4,6 @@ gem 'rails', '3.2.3'
 gem 'jquery-rails'
 gem 'spine-rails'
 gem 'thin'
-gem 'mongoid'
 gem 'nestling'
 gem 'hashie'
 gem 'ripple', git: 'https://github.com/seancribbs/ripple.git'
@@ -29,6 +28,5 @@ group :test, :development do
   gem 'rspec-rails'
   gem "rack-test", require: "rack/test"
   gem "factory_girl"
-  gem "konacha"
   gem 'simplecov'
 end

@@ -58,15 +58,6 @@ GEM
     bson_ext (1.6.4)
       bson (~> 1.6.4)
     builder (3.0.0)
-    capybara (1.1.2)
-      mime-types (>= 1.16)
-      nokogiri (>= 1.3.3)
-      rack (>= 1.0.0)
-      rack-test (>= 0.5.4)
-      selenium-webdriver (~> 2.0)
-      xpath (~> 0.1.4)
-    childprocess (0.3.3)
-      ffi (~> 1.0.6)
     chronic (0.6.7)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -89,7 +80,6 @@ GEM
       rack (>= 1.1.0, < 2)
     faraday_middleware (0.6.5)
       faraday (~> 0.6.0)
-    ffi (1.0.11)
     handlebars_assets (0.4.4)
       execjs (>= 1.2.9)
       sprockets (>= 2.0.3)
@@ -105,30 +95,16 @@ GEM
       railties (>= 3.2.0, < 5.0)
       thor (~> 0.14)
     json (1.7.3)
-    konacha (1.3.1)
-      actionpack (~> 3.1)
-      capybara
-      railties (~> 3.1)
-      sprockets
-    libwebsocket (0.1.3)
-      addressable
     mail (2.4.4)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.19)
-    mongo (1.6.2)
-      bson (~> 1.6.2)
-    mongoid (2.4.11)
-      activemodel (~> 3.1)
-      mongo (<= 1.6.2)
-      tzinfo (~> 0.3.22)
     multi_json (1.0.4)
     multipart-post (1.1.5)
     nestling (0.1.2)
       multi_json (~> 1.0.3)
     newrelic_rpm (3.4.0.1)
-    nokogiri (1.5.5)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)
@@ -173,17 +149,11 @@ GEM
       activesupport (>= 3.0)
       railties (>= 3.0)
       rspec (~> 2.10.0)
-    rubyzip (0.9.9)
     sass (3.1.20)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
-    selenium-webdriver (2.24.0)
-      childprocess (>= 0.2.5)
-      libwebsocket (~> 0.1.3)
-      multi_json (~> 1.0)
-      rubyzip
     simple_oauth (0.1.8)
     simplecov (0.6.4)
       multi_json (~> 1.0)
@@ -208,8 +178,6 @@ GEM
     uglifier (1.2.4)
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
-    xpath (0.1.4)
-      nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
@@ -224,8 +192,6 @@ DEPENDENCIES
   hashie
   jbuilder
   jquery-rails
-  konacha
-  mongoid
   nestling
   newrelic_rpm
   rack-test

@@ -35,7 +35,6 @@ class Recommender extends Spine.Controller
 
   constructor: ->
     super
-    @dealer = new Dealer({ el: @modalEl })
 
   recommendPlaylist: =>
     return false unless $(".artist-items :input").val()
