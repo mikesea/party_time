@@ -1,6 +1,14 @@
 class Recommender
 
-  def self.recommend_tracks_from_artists(artists=[], client=Nestling.new)
+  class << self
+    attr_accessor :client
+  end
+
+  # Instantiate a client to communicate with Echonest
+  # Nestling is a wrapper gem for Echonest's API
+  @client ||= Nestling.new
+
+  def self.recommend_tracks_from_artists(artists=[])
     response = client.playlist.static(
       artist: artists,
       bucket: "id:rdio-us-streaming",

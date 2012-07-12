@@ -22,7 +22,7 @@ describe "Recommender" do
     end
 
     it "returns a collection of tracks with populated values" do
-      rec = Recommender.recommend_tracks_from_artists(artists, client)
+      rec = Recommender.recommend_tracks_from_artists(artists)
       rec.each do |track|
         track.class.should be Track
         track.artist_name.should_not be nil
