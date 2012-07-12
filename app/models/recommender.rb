@@ -1,12 +1,10 @@
 class Recommender
 
+  # This value should be set in an initializer file to refer to the Nestling gem.
+  # (e.g., Recommender.client = Nestling.new "APIKEY" )
   class << self
     attr_accessor :client
   end
-
-  # Instantiate a client to communicate with Echonest
-  # Nestling is a wrapper gem for Echonest's API
-  @client ||= Nestling.new
 
   def self.recommend_tracks_from_artists(artists=[])
     response = client.playlist.static(
