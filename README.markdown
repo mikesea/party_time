@@ -10,19 +10,14 @@ To run the tests:
 $ brew install riak
 ```
 
-2. Install Mongo (if you haven't already):
-```
-$ brew install mongodb
-```
-
-3. Start Riak
+2. Start Riak
 ```
 $ riak start
 $ riak ping
 => pong
 ```
 
-4. Run the specs
+3. Run the specs
 ```
 $ rake spec
 ```
