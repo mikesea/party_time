@@ -3,10 +3,7 @@ class Playlist
   many :tracks 
 
   def self.build_from_artists(artists)
-    playlist = Playlist.new
-    tracks = Recommender.recommend_tracks_from_artists(artists)
-    tracks.each { |track| playlist.tracks << track }
-    playlist
+    Playlist.new tracks: Recommender.recommend_tracks_from_artists(artists)
   end
 
   def add_track(track)
