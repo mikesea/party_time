@@ -16,3 +16,4 @@
 
 /config/initializers/echonest.rb
 /config/initializers/rdio.rb
+/coverage
